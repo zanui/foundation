@@ -15,6 +15,10 @@ $include-html-footer-classes: $include-html-classes !default;
   @if $include-html-footer-classes {
 		
 		.sticky-footer {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
 			display: flex;
 		  min-height: 100vh;
 		  flex-direction: column;
