@@ -1,0 +1,27 @@
+@import "global";
+@import "grid";
+
+//
+// Courtesy of http://philipwalton.github.io/solved-by-flexbox/
+//
+
+//
+// @variables
+//
+
+$include-html-footer-classes: $include-html-classes !default;
+
+@include exports("footer") {
+  @if $include-html-footer-classes {
+		
+		.sticky-footer {
+			display: flex;
+		  min-height: 100vh;
+		  flex-direction: column;
+		}
+
+		.footer {
+			flex: 1;
+		}
+  }
+}
