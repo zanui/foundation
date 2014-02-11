@@ -69,10 +69,17 @@ $total-columns: 12 !default;
     margin-top: 0;
     margin-bottom: 0;
     max-width: $row-width;
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   // Clearfix for all rows
-  @include clearfix();
+  // !FLEX @include clearfix();
 }
 
 // Creates a column, should be used inside of a media query to control layouts
@@ -93,7 +100,7 @@ $total-columns: 12 !default;
   $push:false, 
   $pull:false, 
   $collapse:false, 
-  $float:true,
+  $float:false,
   $position:false) {
 
   // If positioned for default .column, include relative position
@@ -119,25 +126,28 @@ $total-columns: 12 !default;
     width: grid-calc($columns, $total-columns);
 
     // If last column, float naturally instead of to the right
-    @if $last-column { float: $opposite-direction; }
+    
+    // !FLEX @if $last-column { float: $opposite-direction; }
   }
 
   // Source Ordering, adds left/right depending on which you use.
-  @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
-  @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
+  // !FLEX @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
+  // !FLEX @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
 
-  @if $float {
-    @if $float == left or $float == true { float: $default-float; }
-    @else if $float == right { float: $opposite-direction; }
-    @else { float: none; }
-  }
+  // !FLEX
+  // @if $float {
+  //   @if $float == left or $float == true { float: $default-float; }
+  //   @else if $float == right { float: $opposite-direction; }
+  //   @else { float: none; }
+  // }
 
+  // !FLEX
   // If centered, get rid of float and add appropriate margins
-  @if $center {
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
-    float: none;
-  }
+  // @if $center {
+  //   margin-#{$default-float}: auto;
+  //   margin-#{$opposite-direction}: auto;
+  //   float: none;
+  // }
 
   // If offset, calculate appropriate margins
   @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
@@ -156,20 +166,20 @@ $total-columns: 12 !default;
   .columns.#{$size}-uncentered {
     margin-#{$default-float}: 0;
     margin-#{$opposite-direction}: 0;
-    float: $default-float;
+    // !FLEX float: $default-float;
   }
 
   .column.#{$size}-uncentered.opposite,
   .columns.#{$size}-uncentered.opposite {
-    float: $opposite-direction;
+    // !FLEX float: $opposite-direction;
   }
 
   @for $i from 0 through $total-columns - 1 {
     .#{$size}-push-#{$i} {
-      @include grid-column($push:$i, $collapse:null, $float:false);
+      @include grid-column($push:$i, $collapse:null);
     }
     .#{$size}-pull-#{$i} {
-      @include grid-column($pull:$i, $collapse:null, $float:false);
+      @include grid-column($pull:$i, $collapse:null);
     }
   }
 
@@ -178,15 +188,15 @@ $total-columns: 12 !default;
 
 
   @for $i from 1 through $total-columns {
-    .#{$size}-#{$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    .#{$size}-#{$i} { @include grid-column($columns:$i,$collapse:null); }
   }
 
-  [class*="column"] + [class*="column"]:last-child { float: $opposite-direction; }
-  [class*="column"] + [class*="column"].end { float: $default-float; }
+  // !FLEX [class*="column"] + [class*="column"]:last-child { float: $opposite-direction; }
+  // !FLEX [class*="column"] + [class*="column"].end { float: $default-float; }
 
 
   @for $i from 0 through $total-columns - 1 {
-    .#{$size}-offset-#{$i} { @include grid-column($offset:$i, $collapse:null,$float:false); }
+    .#{$size}-offset-#{$i} { @include grid-column($offset:$i, $collapse:null); }
   }
   .#{$size}-reset-order,
   .#{$size}-reset-order {
@@ -194,7 +204,6 @@ $total-columns: 12 !default;
     margin-#{$opposite-direction}: 0;
     left: auto;
     right: auto;
-    float: $default-float; 
   }
 }
 
@@ -225,25 +234,25 @@ $total-columns: 12 !default;
     @media #{$medium-up} {
       @include grid-html-classes($size:medium);
       // Old push and pull classes
-      @for $i from 0 through $total-columns - 1 {
-        .push-#{$i} {
-          @include grid-column($push:$i, $collapse:null, $float:false);
-        }
-        .pull-#{$i} {
-          @include grid-column($pull:$i, $collapse:null, $float:false);
-        }
-      }
+      // !FLEX @for $i from 0 through $total-columns - 1 {
+      // !FLEX   .push-#{$i} {
+      // !FLEX     @include grid-column($push:$i, $collapse:null, $float:false);
+      // !FLEX   }
+      // !FLEX   .pull-#{$i} {
+      // !FLEX     @include grid-column($pull:$i, $collapse:null, $float:false);
+      // !FLEX   }
+      // !FLEX }
     }
     @media #{$large-up} {
       @include grid-html-classes($size:large);
-      @for $i from 0 through $total-columns - 1 {
-        .push-#{$i} {
-          @include grid-column($push:$i, $collapse:null, $float:false);
-        }
-        .pull-#{$i} {
-          @include grid-column($pull:$i, $collapse:null, $float:false);
-        }
-      }
+      // !FLEX @for $i from 0 through $total-columns - 1 {
+      // !FLEX  .push-#{$i} {
+      // !FLEX    @include grid-column($push:$i, $collapse:null, $float:false);
+      // !FLEX  }
+      // !FLEX  .pull-#{$i} {
+      // !FLEX    @include grid-column($pull:$i, $collapse:null, $float:false);
+      // !FLEX  }
+      // !FLEX}
     }
   }
   @if $include-xl-html-grid-classes {
