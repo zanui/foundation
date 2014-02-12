@@ -160,19 +160,8 @@ $total-columns: 12 !default;
     .#{$size}-#{$i} { @include grid-column($columns:$i,$collapse:null); }
   }
 
-  // !FLEX [class*="column"] + [class*="column"]:last-child { float: $opposite-direction; }
-  // !FLEX [class*="column"] + [class*="column"].end { float: $default-float; }
-
-
   @for $i from 0 through $total-columns - 1 {
     .#{$size}-offset-#{$i} { @include grid-column($offset:$i, $collapse:null); }
-  }
-  .#{$size}-reset-order,
-  .#{$size}-reset-order {
-    margin-#{$default-float}: 0;
-    margin-#{$opposite-direction}: 0;
-    left: auto;
-    right: auto;
   }
 }
 
