@@ -37,7 +37,8 @@ $total-columns: 12 !default;
 // $behavior - Any special behavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
 @mixin grid-row(
   $behavior: false,
-  $centered: false) {
+  $centered: false,
+  $reversed: false) {
 
   // use @include grid-row(nest); to include a nested row
   @if $behavior == nest {
@@ -78,15 +79,20 @@ $total-columns: 12 !default;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-
+    
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
   // use flexbox to center the contained columns
   @if $centered {
-    width: 100%;
-    margin: 0;
-    max-width: $row-width;
+    justify-content: center;
+  }
+
+  @if $reversed {
+    flex-direction: row-reverse;
   }
 
   // Clearfix for all rows
@@ -132,14 +138,12 @@ $total-columns: 12 !default;
   // If a column number is given, calculate width
   @if $columns {
     width: grid-calc($columns, $total-columns);
-
-    // If last column, float naturally instead of to the right
-    
-    // !FLEX @if $last-column { float: $opposite-direction; }
   }
 
   @else {
-    width: 100%;
+    @if $collapse == false {
+      width: 100%;
+    }
   }
 
   // If offset, calculate appropriate margins
@@ -183,6 +187,9 @@ $total-columns: 12 !default;
 
         .row {margin-left:0; margin-right:0;}
       }
+
+      &.reversed { @include grid-row($reversed:true); }
+      &.centered { @include grid-row($centered:true); }
 
       .row { @include grid-row($behavior:nest);
         &.collapse { @include grid-row($behavior:nest-collapse); }
