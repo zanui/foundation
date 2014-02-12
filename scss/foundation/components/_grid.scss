@@ -201,21 +201,31 @@ $total-columns: 12 !default;
 
     @media #{$small-up} {
       @include grid-html-classes($size:small);
+      &.small-reversed { @include grid-row($reversed:true); }
+      &.small-centered { @include grid-row($centered:true); }
     }
 
     @media #{$medium-up} {
       @include grid-html-classes($size:medium);
+      &.medium-reversed { @include grid-row($reversed:true); }
+      &.medium-centered { @include grid-row($centered:true); }
     }
     @media #{$large-up} {
       @include grid-html-classes($size:large);
+      &.large-reversed { @include grid-row($reversed:true); }
+      &.large-centered { @include grid-row($centered:true); }
     }
   }
   @if $include-xl-html-grid-classes {
     @media #{$xlarge-up} {
       @include grid-html-classes($size:xlarge);
+      &.xlarge-reversed { @include grid-row($reversed:true); }
+      &.xlarge-centered { @include grid-row($centered:true); }
     }
     @media #{$xxlarge-up} {
       @include grid-html-classes($size:xxlarge);
+      &.xxlarge-reversed { @include grid-row($reversed:true); }
+      &.xxlarge-centered { @include grid-row($centered:true); }
     }
   }
 }
