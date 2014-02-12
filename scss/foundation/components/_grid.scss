@@ -35,7 +35,9 @@ $total-columns: 12 !default;
 //
 // 
 // $behavior - Any special behavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
-@mixin grid-row($behavior: false) {
+@mixin grid-row(
+  $behavior: false,
+  $centered: false) {
 
   // use @include grid-row(nest); to include a nested row
   @if $behavior == nest {
@@ -76,6 +78,15 @@ $total-columns: 12 !default;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+
+    flex-wrap: wrap;
+  }
+
+  // use flexbox to center the contained columns
+  @if $centered {
+    width: 100%;
+    margin: 0;
+    max-width: $row-width;
   }
 
   // Clearfix for all rows
@@ -94,11 +105,8 @@ $total-columns: 12 !default;
 // $float - Should this float? Default: true. Options: true, false, left, right.
 @mixin grid-column(
   $columns:false, 
-  $last-column:false, 
-  $center:false, 
-  $offset:false, 
-  $push:false, 
-  $pull:false, 
+  $last-column:false,
+  $offset:false,
   $collapse:false, 
   $float:false,
   $position:false) {
@@ -130,24 +138,9 @@ $total-columns: 12 !default;
     // !FLEX @if $last-column { float: $opposite-direction; }
   }
 
-  // Source Ordering, adds left/right depending on which you use.
-  // !FLEX @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
-  // !FLEX @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
-
-  // !FLEX
-  // @if $float {
-  //   @if $float == left or $float == true { float: $default-float; }
-  //   @else if $float == right { float: $opposite-direction; }
-  //   @else { float: none; }
-  // }
-
-  // !FLEX
-  // If centered, get rid of float and add appropriate margins
-  // @if $center {
-  //   margin-#{$default-float}: auto;
-  //   margin-#{$opposite-direction}: auto;
-  //   float: none;
-  // }
+  @else {
+    width: 100%;
+  }
 
   // If offset, calculate appropriate margins
   @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
@@ -158,34 +151,6 @@ $total-columns: 12 !default;
 //
 // $size - Name of class to use, i.e. "large" will generate .large-1, .large-2, etc.
 @mixin grid-html-classes($size) {
-
-  .column.#{$size}-centered,
-  .columns.#{$size}-centered { @include grid-column($center:true, $collapse:null, $float:false); }
-
-  .column.#{$size}-uncentered,
-  .columns.#{$size}-uncentered {
-    margin-#{$default-float}: 0;
-    margin-#{$opposite-direction}: 0;
-    // !FLEX float: $default-float;
-  }
-
-  .column.#{$size}-uncentered.opposite,
-  .columns.#{$size}-uncentered.opposite {
-    // !FLEX float: $opposite-direction;
-  }
-
-  @for $i from 0 through $total-columns - 1 {
-    .#{$size}-push-#{$i} {
-      @include grid-column($push:$i, $collapse:null);
-    }
-    .#{$size}-pull-#{$i} {
-      @include grid-column($pull:$i, $collapse:null);
-    }
-  }
-
-  .column,
-  .columns { @include grid-column($columns:false, $position:true); }
-
 
   @for $i from 1 through $total-columns {
     .#{$size}-#{$i} { @include grid-column($columns:$i,$collapse:null); }
@@ -233,26 +198,9 @@ $total-columns: 12 !default;
 
     @media #{$medium-up} {
       @include grid-html-classes($size:medium);
-      // Old push and pull classes
-      // !FLEX @for $i from 0 through $total-columns - 1 {
-      // !FLEX   .push-#{$i} {
-      // !FLEX     @include grid-column($push:$i, $collapse:null, $float:false);
-      // !FLEX   }
-      // !FLEX   .pull-#{$i} {
-      // !FLEX     @include grid-column($pull:$i, $collapse:null, $float:false);
-      // !FLEX   }
-      // !FLEX }
     }
     @media #{$large-up} {
       @include grid-html-classes($size:large);
-      // !FLEX @for $i from 0 through $total-columns - 1 {
-      // !FLEX  .push-#{$i} {
-      // !FLEX    @include grid-column($push:$i, $collapse:null, $float:false);
-      // !FLEX  }
-      // !FLEX  .pull-#{$i} {
-      // !FLEX    @include grid-column($pull:$i, $collapse:null, $float:false);
-      // !FLEX  }
-      // !FLEX}
     }
   }
   @if $include-xl-html-grid-classes {
