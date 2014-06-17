@@ -200,7 +200,7 @@
 
       objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', target.offset().left);
 
-      if (this.small()) {
+      if (this.small() && !target.hasClass('tip-top')) {
         objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', 12.5, $(this.scope).width());
         tip.addClass('tip-override');
         objPos(nub, -nubHeight, 'auto', 'auto', target.offset().left);
@@ -216,6 +216,11 @@
           if (Foundation.rtl) nub.addClass('rtl');
           objPos(tip, (target.offset().top - tip.outerHeight()), 'auto', 'auto', left)
             .removeClass('tip-override');
+          if (this.small()) {
+            console.log('hey')
+            objPos(tip, (target.offset().top - tip.outerHeight()), 'auto', 'auto')
+            .removeClass('tip-override');
+          }
         } else if (classes && classes.indexOf('tip-left') > -1) {
           objPos(tip, (target.offset().top + (target.outerHeight() / 2) - (tip.outerHeight() / 2)), 'auto', 'auto', (target.offset().left - tip.outerWidth() - nubHeight))
             .removeClass('tip-override');
