@@ -586,6 +586,6 @@ $custom-active-bg:darken($custom-link-color, 5%);
 
 
 // Fix for Google Maps
-div#interchangeMarkup img{
+div#interchangeMarkup #map img{
   max-width: none;
 }
