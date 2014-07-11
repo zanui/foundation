@@ -121,6 +121,7 @@ $total-columns: 12 !default;
   // If a column number is given, calculate width
   @if $columns {
     width: grid-calc($columns, $total-columns);
+    width: calc(#{$columns} / #{$total-columns} * 100%);
 
     // If last column, float naturally instead of to the right
     @if $last-column { float: $opposite-direction; }
