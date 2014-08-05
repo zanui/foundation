@@ -222,6 +222,7 @@ module.exports = function(grunt) {
   
   grunt.task.registerTask('watch_start', ['karma:dev_watch:start', 'watch']);
   grunt.registerTask('build:assets', ['clean', 'sass', 'concat', 'uglify', 'copy', 'jst']);
+  grunt.registerTask('build:css', ['sass']);
   grunt.registerTask('build:page', ['assemble']);
   grunt.registerTask('build', ['build:assets', 'assemble']);
   grunt.registerTask('travis', ['build', 'karma:continuous']);
