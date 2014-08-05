@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{default title meta}} | Foundation Docs</title>
-    <link rel="icon" href="{{assets}}/img/icons/favicon.ico" type="image/x-icon">
-    <!-- For third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{assets}}/img/icons/apple-touch-icon-144x144-precomposed.png">
-    <!-- For iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{assets}}/img/icons/apple-touch-icon-114x114-precomposed.png">
-    <!-- For first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{assets}}/img/icons/apple-touch-icon-72x72-precomposed.png">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="{{assets}}/img/icons/apple-touch-icon-precomposed.png">
 
-    <meta name="description" content="{{default description "Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."}}">
-    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com">
-    <meta name="copyright" content="ZURB, inc. Copyright (c) 2014">
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+      <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+      <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+      <meta name="msapplication-TileColor" content="#002337">
+      <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+      <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+      <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+      <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
 
     <link href="{{assets}}/css/docs.css" rel="stylesheet" />
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" />
@@ -29,7 +36,6 @@
       <div class="inner-wrap">
 
         {{> topbar}}
-        {{> offcanvas-nav}}
 
         <section role="main" class="scroll-container">
 
@@ -46,8 +52,6 @@
               {{/markdown}}
             </div>
           </div>
-          {{> foundation-intro-banner}}
-          {{> footer}}
         </section>
 
       </div>
@@ -55,21 +59,7 @@
 
     <script src="{{assets}}/js/templates.js"></script>
     <script src="{{assets}}/js/all.js"></script>
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(
-        ['_setAccount', 'UA-2195009-2'],
-        ['_trackPageview'],
-        ['b._setAccount', 'UA-2195009-27'],
-        ['b._trackPageview']
-      );
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
     <script>
       $(document).foundation().foundation('joyride', 'start');
     </script>
