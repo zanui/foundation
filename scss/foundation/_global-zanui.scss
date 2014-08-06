@@ -1,0 +1,64 @@
+// BUTTON
+
+button,
+.button {
+  text-transform: uppercase;
+}
+
+// FONT
+
+/*
+ * Font-Face mixin
+ * @see http://paulirish.com/2010/font-face-gotchas/#smiley
+ * This overwrites compass font-face mixin
+ *
+ * Required to be changed when deploy the project
+ */
+@mixin font-face($font-family, $file-path, $weight: false, $style: false) {
+  @font-face {
+    font-family: $font-family;
+    src: font-url('#{$file-path}.eot');              /* IE9 Compat Modes */
+    // src: local('☺'), @see http://stackoverflow.com/questions/12650400/is-using-the-smiley-in-font-face-still-relevant
+    src:
+      font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+      font-url('#{$file-path}.woff') format('woff'),
+      font-url('#{$file-path}.ttf') format('truetype'),
+      font-url('#{$file-path}.svg##{$font-family}') format('svg');
+
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $style {
+      font-style: $style;
+    }
+  }
+}
+@function image-url($pth) {
+  @return unquote("url(../img/#{$pth})");
+}
+@function font-url($pth) {
+  @return unquote("url(../fonts/#{$pth})");
+}
+
+@include font-face($source-sans, "SourceSansPro-Light", 300, normal);
+@include font-face($source-sans, "SourceSansPro-Regular", 400, normal);
+@include font-face($source-sans, "SourceSansPro-Bold", 700, normal);
+
+// Typo
+
+h5, h6,
+h5.subheader, h6.subheader {
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  small {
+    text-transform: uppercase;
+  }
+}
+
+h3, h4 {
+  small {
+    font-weight: normal;
+  }
+}

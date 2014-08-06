@@ -40,12 +40,12 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-bold: bold !default;
 
 // We use these to control various global styles
 // $body-bg: #fff;
 $body-font-color: #667079;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: $source-sans, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -124,21 +124,21 @@ $info-color: #4D8FA9;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
+$header-font-weight: 300;
 // $header-font-style: normal;
-$header-font-color: $primary-color;
+$header-font-color: #2E3444;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(39);
+$h2-font-size: rem-calc(33);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(20);
+$h5-font-size: 1rem;
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -150,14 +150,14 @@ $header-font-color: $primary-color;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
-$subheader-font-color: #7993A3;
-// $subheader-font-weight: $font-weight-normal;
+$subheader-font-color: #83959C;
+$subheader-font-weight: 300;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
 // $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-color: $subheader-font-color;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
@@ -347,10 +347,10 @@ $anchor-font-color-hover: #E9413E;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
-// $button-lrg: rem-calc(18);
+$button-tny: rem-calc(9);
+$button-sml: rem-calc(12.5);
+$button-med: rem-calc(15);
+$button-lrg: rem-calc(17);
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -359,12 +359,13 @@ $anchor-font-color-hover: #E9413E;
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
 // $button-font-color: #fff;
-// $button-font-color-alt: #333;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
-// $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
+$button-font-color-alt: #3F5E77;
+
+$button-font-tny: rem-calc(10);
+$button-font-sml: rem-calc(11);
+$button-font-med: rem-calc(12);
+$button-font-lrg: rem-calc(14);
+$button-font-weight: $font-weight-bold;
 // $button-font-align: center;
 
 // We use these to control various hover effects.

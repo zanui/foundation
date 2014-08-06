@@ -1,22 +1,27 @@
 
-//Mixins
-@import "global";
-
 //Foundation Libraries
-@import 
-  "scss/foundation/settings",
-  "foundation";
+@import "scss/foundation/settings-zanui";
+@import "scss/foundation/settings";
+@import "scss/foundation";
+@import "scss/foundation/global-zanui";
 
 //Marketing Site Common Library
-@import 
-  "code",
-  "marketing-off-canvas",
-  "footer",
-  "foundation-forum",
-  "footer-banner";
+@import "code";
 
+//Doc Customized
+.button-row {
+  a {
+    vertical-align: bottom;
+    margin-right: rem-calc(8);
+  }
+}
 
-
+//Transferred from _global.scss
+@mixin border($style: solid,
+$width: 2px,
+$color: darken($panel-bg-color, 1%)) {
+  border: #{$style} #{$width} #{$color};
+}
 
 .row {
   max-width: rem-calc(1440);
@@ -209,7 +214,7 @@ footer { margin-top: 45px; }
 #appHeader { background: $primary-color; }
 
 #appHeader a.sidebar-button span {
-  @include box-shadow(-15px 0 2px #fff, -6px 0 2px #fff, 3px 0 2px #fff);
+//  @include box-shadow(-15px 0 2px #fff, -6px 0 2px #fff, 3px 0 2px #fff);
 }
 
 // Examples
@@ -303,6 +308,8 @@ footer { margin-top: 45px; }
       line-height: 0;
     }
   }
+
+  h5, h6 { font-weight: normal; }
 
   h1 { font-size: $h1-font-size - rem-calc(10); }
   h2 { font-size: $h2-font-size - rem-calc(10); }
