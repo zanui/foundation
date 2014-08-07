@@ -1,8 +1,38 @@
 // BUTTON
+@mixin button-ghost-padding($button-padding: $button-med) {
+  $button-padding-bottom-offset: rem-calc(1);
 
-button,
-.button {
+  padding-top: $button-padding - $zanui-button-ghost-padding-reduction;
+  padding-right: $button-padding * 2 - $zanui-button-ghost-padding-reduction;
+  padding-bottom: $button-padding - $zanui-button-ghost-padding-reduction + $button-padding-bottom-offset;
+  padding-left: $button-padding * 2 - $zanui-button-ghost-padding-reduction;
+}
+
+button, .button {
   text-transform: uppercase;
+
+  &.ghost, &.ghost:hover, &.ghost:focus {
+
+    color: $primary-color;
+    background-color: white;
+    border: 2px solid $primary-color;
+    @include button-style($bg: false, $radius: $button-round);
+
+    // height fix
+    @include button-ghost-padding();
+
+    &.large {
+      @include button-ghost-padding($button-lrg);
+    }
+
+    &.small {
+      @include button-ghost-padding($button-sml);
+    }
+
+    &.tiny {
+      @include button-ghost-padding($button-tny);
+    }
+  }
 }
 
 // FONT
