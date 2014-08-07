@@ -5,29 +5,52 @@
 @import "foundation/functions";
 
 //
+// COLOUR
+//
+$color-blue: #385673;
+$color-light-grey: #E7E7E7;
+$color-green: #4E9458;
+$color-yellow: #FDBC51;
+$color-light-blue: #4D8FA9;
+$color-red: #E9413E;
+
+$color-blue-smoke: #7993A3;
+$color-slate: #667079;
+
+$color-forest: #5A9463;
+$color-salmon: #D45257;
+$color-teal: #5AA6A2;
+$color-tangerine: #FD9251;
+$color-persimmon: #E95D3E;
+$color-seafoam: #D3EEE2;
+$color-thistle: #8C84B0;
+$color-pink: #E593B8;
+$color-white: #FFFFFF;
+
+//
 // GLOBAL
 //
 
 $zanui-source-sans-pro: "Zanui-SSP";
-$zanui-body-font-color: #667079;
+$zanui-body-font-color: $color-slate;
 
-$zanui-primary-color: #385673;
-$zanui-secondary-color: #E7E7E7;
-$zanui-alert-color: #E9413E;
-$zanui-success-color: #4E9458;
-$zanui-warning-color: #FDBC51;
-$zanui-info-color: #4D8FA9;
+$zanui-primary-color: $color-blue;
+$zanui-secondary-color: $color-light-grey;
+$zanui-alert-color: $color-red;
+$zanui-success-color: $color-green;
+$zanui-warning-color: $color-yellow;
+$zanui-info-color: $color-light-blue;
 
 //
 // TYPOGRAPHY
 //
 
 $zanui-header-font-color: $zanui-primary-color;
-$zanui-subheader-font-color: #7993A3;
+$zanui-subheader-font-color: $color-blue-smoke;
 $zanui-small-font-color: $zanui-subheader-font-color;
 
-$zanui-link-font-color: #4D8FA9;
-$zanui-link-font-color-hover: #E9413E;
+$zanui-link-font-color: $color-light-blue;
+$zanui-link-font-color-hover: $color-red;
 
 $zanui-header-font-weight: 300;
 $zanui-header-font-weight-normal-fix: 400;
