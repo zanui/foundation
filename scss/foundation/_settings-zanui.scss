@@ -1,1 +1,60 @@
-$source-sans: "Zanui-SSP";
+//
+// FOUNDATION SETTINGS
+//
+
+@import "foundation/functions";
+
+//
+// GLOBAL
+//
+
+$zanui-source-sans-pro: "Zanui-SSP";
+$zanui-body-font-color: #667079;
+
+$zanui-primary-color: #385673;
+$zanui-secondary-color: #E7E7E7;
+$zanui-alert-color: #E9413E;
+$zanui-success-color: #4E9458;
+$zanui-warning-color: #FDBC51;
+$zanui-info-color: #4D8FA9;
+
+//
+// TYPOGRAPHY
+//
+
+$zanui-header-font-color: $zanui-primary-color;
+$zanui-subheader-font-color: #7993A3;
+$zanui-small-font-color: $zanui-subheader-font-color;
+
+$zanui-link-font-color: #4D8FA9;
+$zanui-link-font-color-hover: #E9413E;
+
+$zanui-header-font-weight: 300;
+$zanui-header-font-weight-normal-fix: 400;
+
+$zanui-h1-font-size: rem-calc(39);
+$zanui-h2-font-size: rem-calc(33);
+$zanui-h3-font-size: rem-calc(24);
+$zanui-h4-font-size: rem-calc(20);
+$zanui-h5-font-size: rem-calc(16);
+$zanui-h6-font-size: rem-calc(16);
+
+//
+// Buttons
+//
+
+$zanui-button-tny: rem-calc(9);
+$zanui-button-sml: rem-calc(12.5);
+$zanui-button-med: rem-calc(15);
+$zanui-button-lrg: rem-calc(17);
+
+$zanui-button-font-color-alt: $zanui-primary-color;
+
+$zanui-button-font-tny: rem-calc(10);
+$zanui-button-font-sml: rem-calc(11);
+$zanui-button-font-med: rem-calc(12);
+$zanui-button-font-lrg: rem-calc(14);
+
+
+
+

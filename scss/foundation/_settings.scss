@@ -44,9 +44,9 @@ $font-weight-bold: bold !default;
 
 // We use these to control various global styles
 // $body-bg: #fff;
-$body-font-color: #667079;
-$body-font-family: $source-sans, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$font-weight-normal:normal;
+$body-font-color: $zanui-body-font-color;
+$body-font-family: $zanui-source-sans-pro, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-weight-normal: normal;
 $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -59,12 +59,12 @@ $body-font-weight: $font-weight-normal;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #385673;
-$secondary-color: #E7E7E7;
-$alert-color: #E9413E;
-$success-color: #4E9458;
-$warning-color: #FDBC51;
-$info-color: #4D8FA9;
+$primary-color: $zanui-primary-color;
+$secondary-color: $zanui-secondary-color;
+$alert-color: $zanui-alert-color;
+$success-color: $zanui-success-color;
+$warning-color: $zanui-warning-color;
+$info-color: $zanui-info-color;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -124,21 +124,21 @@ $info-color: #4D8FA9;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-$header-font-weight: 300;
+$header-font-weight: $zanui-header-font-weight;
 // $header-font-style: normal;
-$header-font-color: #2E3444;
+$header-font-color: $zanui-header-font-color;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(39);
-$h2-font-size: rem-calc(33);
-$h3-font-size: rem-calc(24);
-$h4-font-size: rem-calc(20);
-$h5-font-size: 1rem;
-$h6-font-size: 1rem;
+$h1-font-size: $zanui-h1-font-size;
+$h2-font-size: $zanui-h2-font-size;
+$h3-font-size: $zanui-h3-font-size;
+$h4-font-size: $zanui-h4-font-size;
+$h5-font-size: $zanui-h5-font-size;
+$h6-font-size: $zanui-h6-font-size;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -150,14 +150,14 @@ $h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
-$subheader-font-color: #83959C;
-$subheader-font-weight: 300;
+$subheader-font-color: $zanui-subheader-font-color;
+$subheader-font-weight: $zanui-header-font-weight;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
 // $small-font-size: 60%;
-$small-font-color: $subheader-font-color;
+$small-font-color: $zanui-small-font-color;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
@@ -183,8 +183,8 @@ $small-font-color: $subheader-font-color;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: #4D8FA9;
-$anchor-font-color-hover: #E9413E;
+$anchor-font-color: $zanui-link-font-color;
+$anchor-font-color-hover: $zanui-link-font-color-hover;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -347,10 +347,10 @@ $anchor-font-color-hover: #E9413E;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-$button-tny: rem-calc(9);
-$button-sml: rem-calc(12.5);
-$button-med: rem-calc(15);
-$button-lrg: rem-calc(17);
+$button-tny: $zanui-button-tny;
+$button-sml: $zanui-button-sml;
+$button-med: $zanui-button-med;
+$button-lrg: $zanui-button-lrg;
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -359,12 +359,12 @@ $button-lrg: rem-calc(17);
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
 // $button-font-color: #fff;
-$button-font-color-alt: #3F5E77;
+$button-font-color-alt: $zanui-button-font-color-alt;
 
-$button-font-tny: rem-calc(10);
-$button-font-sml: rem-calc(11);
-$button-font-med: rem-calc(12);
-$button-font-lrg: rem-calc(14);
+$button-font-tny: $zanui-button-font-tny;
+$button-font-sml: $zanui-button-font-sml;
+$button-font-med: $zanui-button-font-med;
+$button-font-lrg: $zanui-button-font-lrg;
 $button-font-weight: $font-weight-bold;
 // $button-font-align: center;
 
