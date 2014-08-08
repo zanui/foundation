@@ -24,7 +24,6 @@
   margin-bottom: rem-calc(40);
   width: $colour-box-size;
   height: $colour-box-size;
-  background-color: $color-light-grey;
   @include radius();
 
   .colour-hex {
@@ -43,25 +42,6 @@
     font-size: rem-calc(12);
     text-transform: capitalize;
   }
-
-  &.blue { background: $color-blue; }
-  &.light-grey { background: $color-light-grey; }
-  &.green { background: $color-green; }
-  &.yellow { background: $color-yellow; }
-  &.light-blue { background: $color-light-blue; }
-  &.red { background: $color-red; }
-
-  &.blue-smoke { background: $color-blue-smoke; }
-  &.slate { background: $color-slate; }
-
-  &.forest { background: $color-forest; }
-  &.salmon { background: $color-salmon; }
-  &.teal { background: $color-teal; }
-  &.tangerine { background: $color-tangerine; }
-  &.persimmon { background: $color-persimmon; }
-  &.seafoam { background: $color-seafoam; }
-  &.thistle { background: $color-thistle; }
-  &.pink { background: $color-pink; }
 }
 
 //Transferred from _global.scss
