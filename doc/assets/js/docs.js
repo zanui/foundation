@@ -85,3 +85,7 @@ if ($('[data-forum-posts]').length > 0) {
     success: cb
   });
 }
+
+$('.button-row a').on('click', function (e) {
+    e.preventDefault();
+});
