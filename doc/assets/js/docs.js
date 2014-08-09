@@ -57,7 +57,8 @@ function initializeMaps() {
 }
 
 var currentUrl = window.location.href;
-    partial = currentUrl.split('docs')[1].split('/'),
+    docsName = currentUrl.indexOf('pattern-library') > 0 ? 'pattern-library' : 'docs',
+    partial = currentUrl.split(docsName)[1].split('/'),
     page = partial[partial.length-1],
     sidenav_links = $('.side-nav a');
 
