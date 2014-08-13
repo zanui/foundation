@@ -37,49 +37,34 @@
 
 // We use these to control colorful button border and hover styles.
 $blue-button-bg-hover: scale-color($color-blue, $lightness: $button-function-factor) !default;
-$blue-button-border-color: $blue-button-bg-hover !default;
 
 $light-grey-button-bg-hover: scale-color($color-light-grey, $lightness: $button-function-factor) !default;
-$light-grey-button-border-color: $light-grey-button-bg-hover !default;
 
 $green-button-bg-hover: scale-color($color-green, $lightness: $button-function-factor) !default;
-$green-button-border-color: $green-button-bg-hover !default;
 
 $yellow-button-bg-hover: scale-color($color-yellow, $lightness: $button-function-factor) !default;
-$yellow-button-border-color: $yellow-button-bg-hover !default;
 
 $light-blue-button-bg-hover: scale-color($color-light-blue, $lightness: $button-function-factor) !default;
-$light-blue-button-border-color: $light-blue-button-bg-hover !default;
 
 $red-button-bg-hover: scale-color($color-red, $lightness: $button-function-factor) !default;
-$red-button-border-color: $red-button-bg-hover !default;
 
 $blue-smoke-button-bg-hover: scale-color($color-blue-smoke, $lightness: $button-function-factor) !default;
-$blue-smoke-button-border-color: $blue-smoke-button-bg-hover !default;
 
 $slate-button-bg-hover: scale-color($color-slate, $lightness: $button-function-factor) !default;
-$slate-button-border-color: $slate-button-bg-hover !default;
 
 $forest-button-bg-hover: scale-color($color-forest, $lightness: $button-function-factor) !default;
-$forest-button-border-color: $forest-button-bg-hover !default;
 
 $salmon-button-bg-hover: scale-color($color-salmon, $lightness: $button-function-factor) !default;
-$salmon-button-border-color: $salmon-button-bg-hover !default;
 
 $teal-button-bg-hover: scale-color($color-teal, $lightness: $button-function-factor) !default;
-$teal-button-border-color: $teal-button-bg-hover !default;
 
 $tangerine-button-bg-hover: scale-color($color-tangerine, $lightness: $button-function-factor) !default;
-$tangerine-button-border-color: $tangerine-button-bg-hover !default;
 
 $persimmon-button-bg-hover: scale-color($color-persimmon, $lightness: $button-function-factor) !default;
-$persimmon-button-border-color: $persimmon-button-bg-hover !default;
 
 $thistle-button-bg-hover: scale-color($color-thistle, $lightness: $button-function-factor) !default;
-$thistle-button-border-color: $thistle-button-bg-hover !default;
 
 $pink-button-bg-hover: scale-color($color-pink, $lightness: $button-function-factor) !default;
-$pink-button-border-color: $pink-button-bg-hover !default;
 
 @mixin button-ghost-padding($button-padding: $button-med) {
   $button-padding-bottom-offset: rem-calc(1);
@@ -93,61 +78,93 @@ $pink-button-border-color: $pink-button-bg-hover !default;
 button, .button {
   text-transform: uppercase;
 
-  &.ghost {
-    &, &.disabled:hover, &[disabled]:hover {
-      color: $color-blue;
-      background-color: $color-white;
-    }
-    &:hover, &:focus {
-      color: $color-white;;
-      background-color: $color-blue;
-    }
-    &, &:hover, &:focus {
-      border: 2px solid $color-blue;
-      @include button-style($bg: false, $radius: $button-round);
+  //
+  // Colour
+  //
+  &.light-grey { @include button-style($bg:$color-light-grey, $bg-hover:$light-grey-button-bg-hover); }
+  &.green { @include button-style($bg:$color-green, $bg-hover:$green-button-bg-hover); }
+  &.yellow { @include button-style($bg:$color-yellow, $bg-hover:$yellow-button-bg-hover); }
+  &.light-blue { @include button-style($bg:$color-light-blue, $bg-hover:$light-blue-button-bg-hover); }
+  &.red { @include button-style($bg:$color-red, $bg-hover:$red-button-bg-hover); }
+  &.blue-smoke { @include button-style($bg:$color-blue-smoke, $bg-hover:$blue-smoke-button-bg-hover); }
+  &.slate { @include button-style($bg:$color-slate, $bg-hover:$slate-button-bg-hover); }
+  &.forest { @include button-style($bg:$color-forest, $bg-hover:$forest-button-bg-hover); }
+  &.salmon { @include button-style($bg:$color-salmon, $bg-hover:$salmon-button-bg-hover); }
+  &.teal { @include button-style($bg:$color-teal, $bg-hover:$teal-button-bg-hover); }
+  &.tangerine { @include button-style($bg:$color-tangerine, $bg-hover:$tangerine-button-bg-hover); }
+  &.persimmon { @include button-style($bg:$color-persimmon, $bg-hover:$persimmon-button-bg-hover); }
+  &.thistle { @include button-style($bg:$color-thistle, $bg-hover:$thistle-button-bg-hover); }
+  &.pink { @include button-style($bg:$color-pink, $bg-hover:$pink-button-bg-hover); }
 
-      // border height fix
-      @include button-ghost-padding();
-      &.large { @include button-ghost-padding($button-lrg); }
-      &.small { @include button-ghost-padding($button-sml); }
-      &.tiny { @include button-ghost-padding($button-tny); }
+  //
+  // Ghost button
+  //
+  &.ghost {
+
+    // border style define
+    border-width: 2px;
+    border-style: solid;
+
+    // border padding height fix
+    @include button-ghost-padding();
+    &.large { @include button-ghost-padding($button-lrg); }
+    &.small { @include button-ghost-padding($button-sml); }
+    &.tiny { @include button-ghost-padding($button-tny); }
+
+    // color style
+    & { @include button-style($bg:$color-white, $bg-hover:$color-blue, $border-color:$color-blue); color: $color-blue; }
+    &.green { @include button-style($bg:$color-white, $bg-hover:$color-green, $border-color:$color-green); color: $color-green; }
+    &.yellow { @include button-style($bg:$color-white, $bg-hover:$color-yellow, $border-color:$color-yellow); color: $color-yellow; }
+    &.light-blue { @include button-style($bg:$color-white, $bg-hover:$color-light-blue, $border-color:$color-light-blue); color: $color-light-blue; }
+    &.red { @include button-style($bg:$color-white, $bg-hover:$color-red, $border-color:$color-red); color: $color-red; }
+    &.blue-smoke { @include button-style($bg:$color-white, $bg-hover:$color-blue-smoke, $border-color:$color-blue-smoke); color: $color-blue-smoke; }
+    &.slate { @include button-style($bg:$color-white, $bg-hover:$color-slate, $border-color:$color-slate); color: $color-slate; }
+    &.forest { @include button-style($bg:$color-white, $bg-hover:$color-forest, $border-color:$color-forest); color: $color-forest; }
+    &.salmon { @include button-style($bg:$color-white, $bg-hover:$color-salmon, $border-color:$color-salmon); color: $color-salmon; }
+    &.teal { @include button-style($bg:$color-white, $bg-hover:$color-teal, $border-color:$color-teal); color: $color-teal; }
+    &.tangerine { @include button-style($bg:$color-white, $bg-hover:$color-tangerine, $border-color:$color-tangerine); color: $color-tangerine; }
+    &.persimmon { @include button-style($bg:$color-white, $bg-hover:$color-persimmon, $border-color:$color-persimmon); color: $color-persimmon; }
+    &.thistle { @include button-style($bg:$color-white, $bg-hover:$color-thistle, $border-color:$color-thistle); color: $color-thistle; }
+    &.pink { @include button-style($bg:$color-white, $bg-hover:$color-pink, $border-color:$color-pink); color: $color-pink; }
+
+    // disabled
+    &.disabled, &[disabled] {
+      & { @include button-style($bg:$color-white, $border-color:$color-blue, $disabled:true); color: $color-blue !important; }
+      &.green { @include button-style($bg:$color-white, $border-color:$color-green, $disabled:true); color: $color-green !important; }
+      &.yellow { @include button-style($bg:$color-white, $border-color:$color-yellow, $disabled:true); color: $color-yellow !important; }
+      &.light-blue { @include button-style($bg:$color-white, $border-color:$color-light-blue, $disabled:true); color: $color-light-blue !important; }
+      &.red { @include button-style($bg:$color-white, $border-color:$color-red, $disabled:true); color: $color-red !important; }
+      &.blue-smoke { @include button-style($bg:$color-white, $border-color:$color-blue-smoke, $disabled:true); color: $color-blue-smoke !important; }
+      &.slate { @include button-style($bg:$color-white, $border-color:$color-slate, $disabled:true); color: $color-slate !important; }
+      &.forest { @include button-style($bg:$color-white, $border-color:$color-forest, $disabled:true); color: $color-forest !important; }
+      &.salmon { @include button-style($bg:$color-white, $border-color:$color-salmon, $disabled:true); color: $color-salmon !important; }
+      &.teal { @include button-style($bg:$color-white, $border-color:$color-teal, $disabled:true); color: $color-teal !important; }
+      &.tangerine { @include button-style($bg:$color-white, $border-color:$color-tangerine, $disabled:true); color: $color-tangerine !important; }
+      &.persimmon { @include button-style($bg:$color-white, $border-color:$color-persimmon, $disabled:true); color: $color-persimmon !important; }
+      &.thistle { @include button-style($bg:$color-white, $border-color:$color-thistle, $disabled:true); color: $color-thistle !important; }
+      &.pink { @include button-style($bg:$color-white, $border-color:$color-pink, $disabled:true); color: $color-pink !important; }
     }
   }
-
-  &.light-grey { @include button-style($bg:$color-light-grey, $bg-hover:$light-grey-button-bg-hover, $border-color:$light-grey-button-border-color); }
-  &.green { @include button-style($bg:$color-green, $bg-hover:$green-button-bg-hover, $border-color:$green-button-border-color); }
-  &.yellow { @include button-style($bg:$color-yellow, $bg-hover:$yellow-button-bg-hover, $border-color:$yellow-button-border-color); }
-  &.light-blue { @include button-style($bg:$color-light-blue, $bg-hover:$light-blue-button-bg-hover, $border-color:$light-blue-button-border-color); }
-  &.red { @include button-style($bg:$color-red, $bg-hover:$red-button-bg-hover, $border-color:$red-button-border-color); }
-  &.blue-smoke { @include button-style($bg:$color-blue-smoke, $bg-hover:$blue-smoke-button-bg-hover, $border-color:$blue-smoke-button-border-color); }
-  &.slate { @include button-style($bg:$color-slate, $bg-hover:$slate-button-bg-hover, $border-color:$slate-button-border-color); }
-  &.forest { @include button-style($bg:$color-forest, $bg-hover:$forest-button-bg-hover, $border-color:$forest-button-border-color); }
-  &.salmon { @include button-style($bg:$color-salmon, $bg-hover:$salmon-button-bg-hover, $border-color:$salmon-button-border-color); }
-  &.teal { @include button-style($bg:$color-teal, $bg-hover:$teal-button-bg-hover, $border-color:$teal-button-border-color); }
-  &.tangerine { @include button-style($bg:$color-tangerine, $bg-hover:$tangerine-button-bg-hover, $border-color:$tangerine-button-border-color); }
-  &.persimmon { @include button-style($bg:$color-persimmon, $bg-hover:$persimmon-button-bg-hover, $border-color:$persimmon-button-border-color); }
-  &.thistle { @include button-style($bg:$color-thistle, $bg-hover:$thistle-button-bg-hover, $border-color:$thistle-button-border-color); }
-  &.pink { @include button-style($bg:$color-pink, $bg-hover:$pink-button-bg-hover, $border-color:$pink-button-border-color); }
 
   &.disabled, &[disabled] {
-    &.light-grey { @include button-style($bg:$color-light-grey, $disabled:true, $bg-hover:$light-grey-button-bg-hover, $border-color:$light-grey-button-border-color); }
-    &.green { @include button-style($bg:$color-green, $disabled:true, $bg-hover:$green-button-bg-hover, $border-color:$green-button-border-color); }
-    &.yellow { @include button-style($bg:$color-yellow, $disabled:true, $bg-hover:$yellow-button-bg-hover, $border-color:$yellow-button-border-color); }
-    &.light-blue { @include button-style($bg:$color-light-blue, $disabled:true, $bg-hover:$light-blue-button-bg-hover, $border-color:$light-blue-button-border-color); }
-    &.red { @include button-style($bg:$color-red, $disabled:true, $bg-hover:$red-button-bg-hover, $border-color:$red-button-border-color); }
-    &.blue-smoke { @include button-style($bg:$color-blue-smoke, $disabled:true, $bg-hover:$blue-smoke-button-bg-hover, $border-color:$blue-smoke-button-border-color); }
-    &.slate { @include button-style($bg:$color-slate, $disabled:true, $bg-hover:$slate-button-bg-hover, $border-color:$slate-button-border-color); }
-    &.forest { @include button-style($bg:$color-forest, $disabled:true, $bg-hover:$forest-button-bg-hover, $border-color:$forest-button-border-color); }
-    &.salmon { @include button-style($bg:$color-salmon, $disabled:true, $bg-hover:$salmon-button-bg-hover, $border-color:$salmon-button-border-color); }
-    &.teal { @include button-style($bg:$color-teal, $disabled:true, $bg-hover:$teal-button-bg-hover, $border-color:$teal-button-border-color); }
-    &.tangerine { @include button-style($bg:$color-tangerine, $disabled:true, $bg-hover:$tangerine-button-bg-hover, $border-color:$tangerine-button-border-color); }
-    &.persimmon { @include button-style($bg:$color-persimmon, $disabled:true, $bg-hover:$persimmon-button-bg-hover, $border-color:$persimmon-button-border-color); }
-    &.thistle { @include button-style($bg:$color-thistle, $disabled:true, $bg-hover:$thistle-button-bg-hover, $border-color:$thistle-button-border-color); }
-    &.pink { @include button-style($bg:$color-pink, $disabled:true, $bg-hover:$pink-button-bg-hover, $border-color:$pink-button-border-color); }
+    &.light-grey { @include button-style($bg:$color-light-grey, $disabled:true); }
+    &.green { @include button-style($bg:$color-green, $disabled:true); }
+    &.yellow { @include button-style($bg:$color-yellow, $disabled:true); }
+    &.light-blue { @include button-style($bg:$color-light-blue, $disabled:true); }
+    &.red { @include button-style($bg:$color-red, $disabled:true); }
+    &.blue-smoke { @include button-style($bg:$color-blue-smoke, $disabled:true); }
+    &.slate { @include button-style($bg:$color-slate, $disabled:true); }
+    &.forest { @include button-style($bg:$color-forest, $disabled:true); }
+    &.salmon { @include button-style($bg:$color-salmon, $disabled:true); }
+    &.teal { @include button-style($bg:$color-teal, $disabled:true); }
+    &.tangerine { @include button-style($bg:$color-tangerine, $disabled:true); }
+    &.persimmon { @include button-style($bg:$color-persimmon, $disabled:true); }
+    &.thistle { @include button-style($bg:$color-thistle, $disabled:true); }
+    &.pink { @include button-style($bg:$color-pink, $disabled:true); }
   }
 
-  // fix lightness fix
-  &.pink, &.pink.disabled, &.pink[disabled] { color: $button-font-color; }
+  // lightness fix
+  &.pink, &.pink.disabled, &.pink[disabled], &.pink.ghost:hover, &.pink.ghost:focus { color: $button-font-color; }
 }
 
 // FONT
