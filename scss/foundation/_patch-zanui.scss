@@ -174,7 +174,9 @@ button, .button {
  * @see http://paulirish.com/2010/font-face-gotchas/#smiley
  * This overwrites compass font-face mixin
  *
- * Required to be changed when deploy the project
+ * ===================================================
+ * Requires to be changed with compass when deploy
+ * ===================================================
  */
 @mixin font-face($font-family, $file-path, $weight: false, $style: false) {
   @font-face {
@@ -222,5 +224,23 @@ h1, h2, h3, h4, h5, h6 {
 h3, h4 {
   small {
     font-weight: $zanui-header-font-weight-normal-fix;
+  }
+}
+
+// Link
+a.text-link {
+  border-bottom: 1px dotted $zanui-body-font-color;
+  /**
+  * ===================================================
+  * Requires to be changed with compass when deploy
+  * ===================================================
+  */
+  -webkit-transition-duration: $zanui-transition-duration-normal;
+  -moz-transition-duration: $zanui-transition-duration-normal;
+  -o-transition-duration: $zanui-transition-duration-normal;
+  transition-duration: $zanui-transition-duration-normal;
+
+  .no-touch &:hover, .no-touch &:focus {
+    border-bottom-color: $zanui-link-font-color-hover;
   }
 }

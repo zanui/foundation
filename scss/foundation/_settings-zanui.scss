@@ -50,7 +50,7 @@ $zanui-header-font-color: $zanui-primary-color;
 $zanui-subheader-font-color: $color-blue-smoke;
 $zanui-small-font-color: $zanui-subheader-font-color;
 
-$zanui-link-font-color: $color-light-blue;
+$zanui-link-font-color: $zanui-body-font-color;
 $zanui-link-font-color-hover: $color-red;
 
 $zanui-header-font-weight: 300;
@@ -80,3 +80,11 @@ $zanui-button-font-tny: rem-calc(10);
 $zanui-button-font-sml: rem-calc(11);
 $zanui-button-font-med: rem-calc(12);
 $zanui-button-font-lrg: rem-calc(14);
+
+//
+// Transition
+//
+
+$zanui-transition-duration-fast: 200ms;
+$zanui-transition-duration-normal: 300ms;
+$zanui-transition-duration-slow: 400ms;
