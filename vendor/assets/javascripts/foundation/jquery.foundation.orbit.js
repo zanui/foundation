@@ -1,10 +1,11 @@
 /*
+ * jquery.foundation-v3.1.0.orbit.zanui
+ *
  * jQuery Orbit Plugin 1.4.0
- * www.ZURB.com/playground
- * Copyright 2010, ZURB
- * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
-*/
+ * Customized based on foundation v3.1.0 by zanui
+ *
+ * https://github.com/zanui/foundation/blob/zanui-v3.1.0/vendor/assets/javascripts/foundation/jquery.foundation.orbit.js
+ */
 
 
 (function ($) {
@@ -227,8 +228,17 @@
         .css({"z-index" : 3})
         .fadeIn(function() {
           //brings in all other slides IF css declares a display: none
-          self.$slides.css({"display":"block"})
+          self.$slides.css({"display":"block"});
+          self.enableSlide(self.$slides.first());
       });
+    },
+
+    enableSlide: function (slide) {
+      if (slide.data('awake') !== 'on') {
+        var img = slide.find('img');
+        img.css({'visibility': 'visible'});
+        img.attr('src', img.data('original'));
+      }
     },
 
     startClock: function () {
@@ -238,15 +248,10 @@
         return false;
       }
 
-      if (this.$timer.is(':hidden')) {
-        this.clock = setInterval(function () {
-          self.$element.trigger('orbit.next');
-        }, this.options.advanceSpeed);
-      } else {
-        this.timerRunning = true;
-        this.$pause.removeClass('active');
-        this.clock = setInterval(this.rotateTimer, this.options.advanceSpeed / 180, false);
-      }
+      //rotate decrease performace
+      this.clock = setInterval(function () {
+        self.$element.trigger('orbit.next');
+      }, this.options.advanceSpeed);
     },
 
     rotateTimer: function (reset) {
@@ -492,6 +497,12 @@
         this.$slides
           .eq(this.prevActiveSlide)
           .css({"z-index" : 2});
+
+        //display the actived one when shift applies
+        //hide the others in css to avoid images flashing in page loading
+        this.$slides.eq(this.activeSlide).show();
+
+        this.enableSlide(this.$slides.eq(this.activeSlide));
 
         //fade
         if (this.options.animation == "fade") {
@@ -789,7 +800,7 @@ app.run = function (o) {
 	for (var l = images.length, i = 0; i < l; i++) {
 		var theme = settings.themes.gray;
 		var src = images[i].getAttribute("data-src") || images[i].getAttribute("src");
-		if ( !! ~src.indexOf(options.domain)) {
+		if (src != null && !! ~src.indexOf(options.domain)) {
 			var render = false,
 				dimensions = null,
 				text = null;
