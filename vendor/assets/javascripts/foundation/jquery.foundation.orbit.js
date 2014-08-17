@@ -237,9 +237,9 @@
       if (slide.data('awake') !== 'on') {
         slide.data('awake', 'on');
 
-        var img = slide.find('img');
-        img.css({'visibility': 'visible'});
-        img.attr('src', img.data('original'));
+        var lazyImg = slide.find('.orbit-lazy');
+        lazyImg.css({'visibility': 'visible'});
+        lazyImg.attr('src', lazyImg.data('original'));
       }
     },
 
