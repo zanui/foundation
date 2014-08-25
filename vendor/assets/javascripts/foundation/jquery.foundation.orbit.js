@@ -21,6 +21,8 @@
   var ORBIT = {
 
     defaults: {
+      context: null,     // where the orbit is placed
+      onImageLoad: null,    // callback when image lazyload is triggered
       animation: 'horizontal-push',     // fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
       animationSpeed: 600,        // how fast animtions are
       timer: true,            // true or false to have the timer
@@ -229,18 +231,28 @@
         .fadeIn(function() {
           //brings in all other slides IF css declares a display: none
           self.$slides.css({"display":"block"});
-          self.enableSlide(self.$slides.first());
+          self.enableLazyloadSlide(self.$slides.first());
       });
     },
 
-    enableSlide: function (slide) {
-      if (slide.data('awake') !== 'on') {
-        slide.data('awake', 'on');
+    enableLazyloadSlide: function (slide) {
+        if (slide.data('awake') !== 'on') {
+            slide.data('awake', 'on');
 
-        var lazyImg = slide.find('.orbit-lazy');
-        lazyImg.css({'visibility': 'visible'});
-        lazyImg.attr('src', lazyImg.data('original'));
-      }
+            var lazyImg = slide.find('.orbit-lazy');
+
+            if (lazyImg.length > 0) {
+                lazyImg.css({'visibility': 'visible'});
+                lazyImg.attr('src', lazyImg.data('original'));
+            } else {
+                lazyImg = slide.find('.orbit-default');
+            }
+
+
+            if (this.options.onImageLoad) {
+                this.options.onImageLoad.call(this, this.options.context, lazyImg);
+            }
+        }
     },
 
     startClock: function () {
@@ -504,7 +516,7 @@
         //hide the others in css to avoid images flashing in page loading
         this.$slides.eq(this.activeSlide).show();
 
-        this.enableSlide(this.$slides.eq(this.activeSlide));
+        this.enableLazyloadSlide(this.$slides.eq(this.activeSlide));
 
         //fade
         if (this.options.animation == "fade") {
