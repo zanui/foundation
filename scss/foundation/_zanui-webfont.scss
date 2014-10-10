@@ -1,0 +1,274 @@
+// Icon Advanced Settings
+// -------------------------
+
+$z-icon-prefix: z-icon;
+$z-icon-fix-space: rem-calc(5);
+
+@-webkit-keyframes z-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes z-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@mixin z-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin z-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+  -ms-transform: scale($horiz, $vert);
+  transform: scale($horiz, $vert);
+}
+
+[class^="z-icon-"], [class*=" z-icon-"] {
+  display: inline-block;
+
+  // Size
+  &.small { font-size: $rem-base * 0.875; }
+  &.large { font-size: $rem-base * 1.5; }
+  &.x2 { font-size: $rem-base * 2; }
+  &.x3 { font-size: $rem-base * 3; }
+  &.x4 { font-size: $rem-base * 4; }
+
+  // Text Sign
+  &.prefix-icon { margin-right: $z-icon-fix-space; }
+  &.postfix-icon { margin-left: $z-icon-fix-space; }
+
+  // Spinning
+  &.spinning {
+    -webkit-animation: z-spin 2s infinite linear;
+    animation: z-spin 2s infinite linear;
+  }
+
+  // Rotated & Flipped
+  &.rotate-90 { @include z-rotate(90deg, 1);}
+  &.rotate-180 { @include z-rotate(180deg, 2); }
+  &.rotate-270 { @include z-rotate(270deg, 3); }
+  &.flip-horizontal { @include z-flip(-1, 1, 0); }
+  &.flip-vertical { @include z-flip(1, -1, 2); }
+  // Hook for IE8-9
+  &.rotate-90,
+  &.rotate-180,
+  &.rotate-270,
+  &.flip-horizontal,
+  &.flip-vertical {
+    filter: none;
+  }
+}
+
+// Font Metrics
+// -------------------------
+// Em Square Height (Power of 2): 512
+// Baseline Height (% Em): 6.25
+// Whitespace Width (% Em): 50
+//
+// @see https://icomoon.io/app/
+
+[class^="z-icon-"], [class*=" z-icon-"] {
+  font-family: $zanui-webfont;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.z-icon-announce:before {
+  content: "\e600";
+}
+.z-icon-arrow-bottom:before {
+  content: "\e601";
+}
+.z-icon-arrow-left:before {
+  content: "\e602";
+}
+.z-icon-arrow-right:before {
+  content: "\e603";
+}
+.z-icon-arrow-top:before {
+  content: "\e604";
+}
+.z-icon-assembly:before {
+  content: "\e605";
+}
+.z-icon-blog:before {
+  content: "\e606";
+}
+.z-icon-book:before {
+  content: "\e607";
+}
+.z-icon-calendar:before {
+  content: "\e608";
+}
+.z-icon-cancelled:before {
+  content: "\e609";
+}
+.z-icon-cart:before {
+  content: "\e60a";
+}
+.z-icon-chevron-down:before {
+  content: "\e60b";
+}
+.z-icon-chevron-left:before {
+  content: "\e60c";
+}
+.z-icon-chevron-right:before {
+  content: "\e60d";
+}
+.z-icon-chevron-up:before {
+  content: "\e60e";
+}
+.z-icon-clock:before {
+  content: "\e60f";
+}
+.z-icon-colours:before {
+  content: "\e610";
+}
+.z-icon-cross-cancel:before {
+  content: "\e611";
+}
+.z-icon-download:before {
+  content: "\e612";
+}
+.z-icon-edit:before {
+  content: "\e613";
+}
+.z-icon-email:before {
+  content: "\e614";
+}
+.z-icon-facebook:before {
+  content: "\e615";
+}
+.z-icon-flat-pack:before {
+  content: "\e616";
+}
+.z-icon-geo:before {
+  content: "\e617";
+}
+.z-icon-grid:before {
+  content: "\e618";
+}
+.z-icon-help:before {
+  content: "\e619";
+}
+.z-icon-hourglass:before {
+  content: "\e61a";
+}
+.z-icon-instagram:before {
+  content: "\e61b";
+}
+.z-icon-invoice:before {
+  content: "\e61c";
+}
+.z-icon-link:before {
+  content: "\e61d";
+}
+.z-icon-list:before {
+  content: "\e61e";
+}
+.z-icon-lock:before {
+  content: "\e61f";
+}
+.z-icon-notification:before {
+  content: "\e620";
+}
+.z-icon-parcel:before {
+  content: "\e621";
+}
+.z-icon-password-key:before {
+  content: "\e622";
+}
+.z-icon-phone:before {
+  content: "\e623";
+}
+.z-icon-pinterest:before {
+  content: "\e624";
+}
+.z-icon-price-tag:before {
+  content: "\e625";
+}
+.z-icon-printer:before {
+  content: "\e626";
+}
+.z-icon-quick-view:before {
+  content: "\e627";
+}
+.z-icon-recommend-down-arrow:before {
+  content: "\e628";
+}
+.z-icon-recommend-left-arrow:before {
+  content: "\e629";
+}
+.z-icon-recommend-right-arrow:before {
+  content: "\e62a";
+}
+.z-icon-recommend-up-arrow:before {
+  content: "\e62b";
+}
+.z-icon-resize:before {
+  content: "\e62c";
+}
+.z-icon-returns:before {
+  content: "\e62d";
+}
+.z-icon-ruler:before {
+  content: "\e62e";
+}
+.z-icon-search:before {
+  content: "\e62f";
+}
+.z-icon-share:before {
+  content: "\e630";
+}
+.z-icon-star:before {
+  content: "\e631";
+}
+.z-icon-tick:before {
+  content: "\e632";
+}
+.z-icon-tree:before {
+  content: "\e633";
+}
+.z-icon-truck:before {
+  content: "\e634";
+}
+.z-icon-twitter:before {
+  content: "\e635";
+}
+.z-icon-user:before {
+  content: "\e636";
+}
+.z-icon-video:before {
+  content: "\e637";
+}
+.z-icon-warn:before {
+  content: "\e638";
+}
+.z-icon-wishlist:before {
+  content: "\e639";
+}

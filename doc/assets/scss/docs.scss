@@ -4,11 +4,21 @@
 @import "scss/foundation/settings";
 @import "scss/foundation";
 @import "scss/foundation/patch-zanui";
+@import "scss/foundation/zanui-webfont";
 
 //Marketing Site Common Library
 @import "code";
 
 //Doc Customized
+.webfont-row {
+  span {
+    margin-right: rem-calc(16);
+  }
+  div {
+    line-height: 2rem;
+  }
+}
+
 .button-row {
   a {
     vertical-align: bottom;
