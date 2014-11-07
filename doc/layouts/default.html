@@ -1,6 +1,7 @@
 <!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" dir="ltr">
+<!--[if lt IE 9]> <html class="no-js lt-ie10 lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +31,13 @@
     <link href="{{assets}}/css/docs.css" rel="stylesheet" />
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" />
     <script src="{{assets}}/js/modernizr.js"></script>
+
+      <!--[if lt IE 9]>
+      <link rel="stylesheet" href="{{assets}}/css/ie8.css">
+
+      <script src="{{assets}}/js/ie8-polyfill.js"></script>
+      <![endif]-->
+
   </head>
   <body class="antialiased hide-extras">
     <div class="marketing off-canvas-wrap" data-offcanvas>
@@ -58,10 +66,55 @@
     </div>
 
     <script src="{{assets}}/js/templates.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="{{assets}}/js/jquery-1.9.0.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="{{assets}}/js/jquery-edge.js"></script>
+    <!--<![endif]-->
+
     <script src="{{assets}}/js/all.js"></script>
 
     <script>
-      $(document).foundation().foundation('joyride', 'start');
+
+    // Fix for foundation stylesheets being picked up as "null" or "not an object",
+    // implementation from here: http://foundation.zurb.com/forum/posts/3189-foundation-5-orbit-slider-ie8-issue
+    (function($) {
+        if (!Foundation.stylesheet) {
+            Foundation._style_element = $("<style></style>").appendTo("head")[0];
+            Foundation.stylesheet = Foundation._style_element.styleSheet;
+            if (Foundation.stylesheet) {
+                Foundation.stylesheet.cssRules = {
+                    length: 0
+                };
+                Foundation.stylesheet.insertRule = function(rule, index) {
+                    var media, mediaMatch, mediaRegex, namespace, ruleMatch, ruleRegex;
+                    mediaRegex = /^\s*@media\s*(.*?)\s*\{\s*(.*?)\s*\}\s*$/;
+                    mediaMatch = mediaRegex.exec(rule);
+                    media = "";
+                    if (mediaMatch) {
+                        media = "@media " + mediaMatch[1] + " ";
+                        rule = mediaMatch[2];
+                    }
+                    ruleRegex = /^\s*(.*?)\s*\{\s*(.*?)\s*\}\s*$/;
+                    ruleMatch = ruleRegex.exec(rule);
+                    namespace = "" + media + ruleMatch[1];
+                    rule = ruleMatch[2];
+                    return this.addRule(namespace, rule);
+                };
+            } else if (window.console) {
+                console.log("Could not fix Foundation css rules...");
+            }
+        }
+    })(jQuery);
+
+    // Safely initiate foundation now
+      $(document).foundation();
     </script>
+
+    <!--[if lt IE 9]>
+    <script src="{{assets}}/js/REM-unit-polyfill.js"></script>
+    <![endif]-->
   </body>
 </html>

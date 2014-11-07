@@ -16,7 +16,7 @@
 bower_components
 dist
 /docs2/public/*
-vendor
+/vendor
 _yardoc
 coverage
 docs/public/*

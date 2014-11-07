@@ -57,6 +57,7 @@ module.exports = function(grunt) {
         files: {
           'dist/assets/css/foundation.css': '<%= foundation.scss %>',
           'dist/assets/css/normalize.css': 'scss/normalize.scss',
+          'dist/docs/assets/css/ie8.css': 'doc/assets/scss/ie8.scss',
           'dist/docs/assets/css/docs.css': 'doc/assets/scss/docs.scss'
         }
       }
@@ -77,16 +78,27 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'dist/assets/js/foundation.min.js': ['<%= foundation.js %>'],
+          'dist/docs/assets/js/jquery-edge.js': ['<%= vendor %>/jquery/dist/jquery.js'],
+          'dist/docs/assets/js/jquery-1.9.0.js': ['js/vendor/jquery-1.9.0.js'],
           'dist/docs/assets/js/modernizr.js': ['<%= vendor %>/modernizr/modernizr.js'],
-          'dist/docs/assets/js/all.js': ['<%= vendor %>/jquery/dist/jquery.js', 'vendor/lodash/dist/lodash.min.js','<%= vendor %>/fastclick/lib/fastclick.js', '<%= vendor %>/jquery-placeholder/jquery.placeholder.js', '<%= vendor %>/jquery.autocomplete/dist/jquery.autocomplete.js', '<%= foundation.js %>', 'doc/assets/js/docs.js']
+          'dist/docs/assets/js/REM-unit-polyfill.js': ['<%= vendor %>/REM-unit-polyfill/js/rem.js'],
+          'dist/docs/assets/js/ie8-polyfill.js': ['<%= vendor %>/html5shiv/dist/html5shiv.js', 'js/vendor/nwmatcher-1.2.5.js','js/vendor/selectivizr-1.0.3b.js', '<%= vendor %>/respond/dest/respond.src.js', '<%= vendor %>/es5-shim/es5-shim.js'],
+          'dist/docs/assets/js/all.js': ['vendor/lodash/dist/lodash.min.js','<%= vendor %>/fastclick/lib/fastclick.js', '<%= vendor %>/jquery-placeholder/jquery.placeholder.js', '<%= vendor %>/jquery.autocomplete/dist/jquery.autocomplete.js', '<%= foundation.js %>', 'doc/assets/js/docs.js']
         }
       },
       vendor: {
         files: {
+          'dist/assets/js/vendor/REM-unit-polyfill.js': '<%= vendor %>/REM-unit-polyfill/js/rem.js',
+          'dist/assets/js/vendor/html5shiv.js': '<%= vendor %>/html5shiv/dist/html5shiv.js',
+          'dist/assets/js/vendor/nwmatcher.js': 'js/vendor/nwmatcher-1.2.5.js',
+          'dist/assets/js/vendor/selectivizr.js': 'js/vendor/selectivizr-1.0.3b.js',
+          'dist/assets/js/vendor/respond.js': '<%= vendor %>/respond/dest/respond.src.js',
+          'dist/assets/js/vendor/es5-shim.js': '<%= vendor %>/es5-shim/es5-shim.js',
           'dist/assets/js/vendor/placeholder.js': '<%= vendor %>/jquery-placeholder/jquery.placeholder.js',
           'dist/assets/js/vendor/fastclick.js': '<%= vendor %>/fastclick/lib/fastclick.js',
           'dist/assets/js/vendor/jquery.cookie.js': '<%= vendor %>/jquery.cookie/jquery.cookie.js',
-          'dist/assets/js/vendor/jquery.js': '<%= vendor %>/jquery/dist/jquery.js',
+          'dist/assets/js/vendor/jquery-edge.js': '<%= vendor %>/jquery/dist/jquery.js',
+          'dist/assets/js/vendor/jquery-1.9.0.js': 'js/vendor/jquery-1.9.0.js',
           'dist/assets/js/vendor/modernizr.js': '<%= vendor %>/modernizr/modernizr.js'
         }
       }
@@ -101,6 +113,11 @@ module.exports = function(grunt) {
           {expand:true, cwd: 'scss/', src: '**/*.scss', dest: 'dist/assets/scss/', filter: 'isFile'},
           {src: 'bower.json', dest: 'dist/assets/'}
         ]
+      },
+      final: {
+          files: [
+              {expand:true, cwd: 'dist/docs/', src: ['**/*'], dest: '../shop/alice/alice/public/pattern-library/'}
+          ]
       }
     },
 
@@ -118,7 +135,7 @@ module.exports = function(grunt) {
     karma: {
       options: {
         configFile: 'karma.conf.js',
-        runnerPort: 9999,
+        runnerPort: 9999
       },
       continuous: {
         singleRun: true,
@@ -221,10 +238,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jst');
   
   grunt.task.registerTask('watch_start', ['karma:dev_watch:start', 'watch']);
-  grunt.registerTask('build:assets', ['clean', 'sass', 'concat', 'uglify', 'copy', 'jst']);
+  grunt.registerTask('build:assets', ['clean', 'sass', 'concat', 'uglify', 'copy:dist', 'jst']);
   grunt.registerTask('build:css', ['sass']);
   grunt.registerTask('build:page', ['assemble']);
-  grunt.registerTask('build', ['build:assets', 'assemble']);
+  grunt.registerTask('build', ['build:assets', 'assemble', 'copy:final']);
   grunt.registerTask('travis', ['build', 'karma:continuous']);
   grunt.registerTask('develop', ['travis', 'watch_start']);
   grunt.registerTask('deploy', ['build', 'rsync:dist']);
