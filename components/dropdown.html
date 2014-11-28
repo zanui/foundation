@@ -1,0 +1,473 @@
+<!doctype html>
+<!--[if lt IE 9]> <html class="no-js lt-ie10 lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dropdowns | Zanui Pattern Library</title>
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+      <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+      <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+      <meta name="msapplication-TileColor" content="#002337">
+      <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+      <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+      <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+      <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+
+    <link href="../assets/css/docs.css" rel="stylesheet" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" />
+    <script src="../assets/js/modernizr.js"></script>
+
+      <!--[if lt IE 9]>
+      <link rel="stylesheet" href="../assets/css/ie8.css">
+
+      <script src="../assets/js/ie8-polyfill.js"></script>
+      <![endif]-->
+
+  </head>
+  <body class="antialiased hide-extras">
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+         <title>Zanui Pattern Library</title>
+
+
+<!-- <nav class="tab-bar show-for-small">
+  <a class="off-canvas-left-toggle menu-icon ">
+    <span></span>
+  </a>  
+</nav> -->
+
+
+<nav class="top-bar docs-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://zanui.com.au/">Zanui Pattern Library</a></h1>
+    </li>
+  </ul>
+
+</nav>
+
+
+        <section role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-4 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+  <h5>Documentation</h5>
+  <form>
+    <!--  <label>Search Documentation</label> -->
+    <input tabindex="1" id="autocomplete" type="search" placeholder="Search Docs: e.g. forms">
+  </form>
+
+  <nav>
+    <ul class="side-nav">
+
+        <li class="divider"></li>
+        <li class="heading">Colour</li>
+        <li><a href="colour_palette.html" data-search="">Colour Palette</a></li>
+        <li><a href="colourful_text.html" data-search="">Colourful Text</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Glyphs</li>
+        <li><a href="web_fonts.html" data-search="">Web Fonts</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Buttons</li>
+        <li><a href="buttons.html" data-search="">Buttons</a></li>
+        <li><a href="button_groups.html" data-search="Button Bar">Button Groups</a></li>
+        <li><a href="dropdown_buttons.html" data-search="">Dropdown Buttons <span class="label">JS</span></a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Typography</li>
+        <li><a href="typography.html" data-search="Typography,Type-setting,Composition">Type</a></li>
+        <li><a href="inline_lists.html" data-search="Lists">Inline Lists</a></li>
+        <li><a href="labels.html" data-search="Tags">Labels</a></li>
+        <li><a href="keystrokes.html" data-search="">Keystrokes</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Forms</li>
+        <li><a href="forms.html" data-search="">Forms</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Content</li>
+        <li><a href="dropdown.html" data-search="">Dropdowns <span class="label">JS</span></a></li>
+        <li><a href="progress_bars.html" data-search="">Progress Bars</a></li>
+        <li><a href="tables.html" data-search="">Tables</a></li>
+        <li><a href="accordion.html" data-search="">Accordion <span class="label">JS</span></a></li>
+        <li><a href="tabs.html" data-search="">Tabs <span class="label">JS</span></a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Navigation</li>
+        <li><a href="offcanvas.html" data-search="Off Canvas">Offcanvas <span class="label">JS</span></a></li>
+        <li><a href="topbar.html" data-search="Nav Bar,Navigation,Sticky">Top Bar <span class="label">JS</span></a></li>
+        <li><a href="sidenav.html" data-search="">Side Nav</a></li>
+        <li><a href="magellan.html" data-search="Scrollspy">Magellan Sticky Nav <span class="label">JS</span></a></li>
+        <li><a href="subnav.html" data-search="">Sub Nav</a></li>
+        <li><a href="breadcrumbs.html" data-search="Navigation Path,Cookie Crumb">Breadcrumbs</a></li>
+        <li><a href="pagination.html" data-search="">Pagination</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Callouts &amp; Prompts</li>
+        <li><a href="alert_boxes.html" data-search="Error,Success,Warning">Alerts <span class="label">JS</span></a></li>
+        <li><a href="panels.html" data-search="Wells">Panels</a></li>
+        <li><a href="tooltips.html" data-search="Popover">Tooltips <span class="label">JS</span></a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Structure</li>
+        <li><a href="grid.html" data-search="">Grid</a></li>
+        <li><a href="block_grid.html" data-search="">Block Grid</a></li>
+        <li><a href="visibility.html" data-search="">Visibility</a></li>
+        <li><a href="../media-queries.html" data-search="Breakpoints">Media Queries</a></li>
+        <li><a href="../utility-classes.html" data-search="">Utility Classes</a></li>
+        <li><a href="../javascript-utilities.html" data-search="">Javascript Utilities</a></li>
+
+    </ul>
+  </nav>
+
+</div>
+
+              </div>
+            </div>
+            <div class="large-9 medium-8 columns">
+              <h1 id="dropdowns">Dropdowns</h1>
+              <h3 class="subheader">We removed the various dropdowns within different UI elements for Foundation 5. Instead, we created a universal dropdown plugin that will attach dropdowns or popovers to whatever element you need.</h3>
+
+<hr>
+<p><a href="#" class="button" data-dropdown="tinyDrop">Link Dropdown &raquo;</a></p>
+<ul id="tinyDrop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+
+<p><a href="#" class="button" data-dropdown="contentDrop">Content Dropdown &raquo;</a></p>
+<div id="contentDrop" class="f-dropdown content medium" data-dropdown-content>
+  <h4>Title</h4>
+  <p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+  <img src="../assets/img/examples/comet.jpg">
+  <p>More test.</p>
+  <a href="#" class="button">Button</a>
+</div>
+
+<hr>
+<h3>Basic</h3>
+
+<p>You can create a dropdown using minimal markup. <strong>On a small device, the tooltips are full-width and bottom aligned.</strong></p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span> <span class="attribute">data-dropdown</span>=<span class="value">&quot;drop1&quot;</span>&gt;</span>Has Dropdown<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">&quot;drop1&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;f-dropdown&quot;</span> <span class="attribute">data-dropdown-content</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>Yet another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span> <span class="attribute">data-dropdown</span>=<span class="value">&quot;drop2&quot;</span>&gt;</span>Has Content Dropdown<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;drop2&quot;</span> <span class="attribute">data-dropdown-content</span> <span class="attribute">class</span>=<span class="value">&quot;f-dropdown content&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>HTML Rendered</h4>
+<p>
+  <a href="#" data-dropdown="drop1">Has Dropdown</a> | <a href="#" data-dropdown="drop2">Has Content Dropdown</a>
+  <ul id="drop1" data-dropdown-content class="f-dropdown">
+    <li><a href="#">This is a link</a></li>
+    <li><a href="#">This is another</a></li>
+    <li><a href="#">Yet another</a></li>
+  </ul>
+  <div id="drop2" data-dropdown-content class="f-dropdown content">
+    <p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+  </div>
+</p>
+  </div>
+</div>
+
+<hr>
+<h3>Advanced</h3>
+
+<p>Additional classes can be added to your dropdown to change its appearance.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;button&quot;</span> <span class="attribute">data-dropdown</span>=<span class="value">&quot;drop&quot;</span>&gt;</span>Link Dropdown &amp;raquo;<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">&quot;drop&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;[tiny small medium large content]f-dropdown&quot;</span> <span class="attribute">data-dropdown-content</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>Yet another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <a href="#" class="button" data-dropdown="tinyDrop2">Link Dropdown &raquo;</a>
+    <ul id="tinyDrop2" class="medium f-dropdown" data-dropdown-content>
+      <li><a href="#">This is a link</a></li>
+      <li><a href="#">This is another</a></li>
+      <li><a href="#">Yet another</a></li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+<h3>Directions</h3>
+
+<p>You can now position dropdowns on the top, bottom, left, or right of the target element. The default position is <em>bottom</em> and you do not need to change anything to get your tooltip positioned <em>bottom</em>.</p>
+<p>To set other alignments, just specify the <code>align</code> property in <code>data-options</code> on the target element.</p>
+<div class="row">
+  <div class="large-6 columns">
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span> <span class="attribute">data-options</span>=<span class="value">&quot;align:left&quot;</span> <span class="attribute">data-dropdown</span>=<span class="value">&quot;drop&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;button&quot;</span>&gt;</span>Link Dropdown &amp;raquo;<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">&quot;drop&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;[tiny small medium large content]f-dropdown&quot;</span> <span class="attribute">data-dropdown-content</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>Yet another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <a href="#" class="button" data-dropdown="topDrop" data-options="align: top">Top &raquo;</a>
+<ul id="topDrop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+<a href="#" class="button" data-dropdown="leftDrop" data-options="align: left">Left &raquo;</a>
+<ul id="leftDrop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+<a href="#" class="button" data-dropdown="downDrop">Down &raquo;</a>
+<ul id="downDrop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+<a href="#" class="button" data-dropdown="rightDrop" data-options="align: right">Right &raquo;</a>
+<ul id="rightDrop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+  </div>
+</div>
+
+<hr>
+<p>Available class options:</p>
+<ul>
+<li><code>tiny</code>: Make the dropdown have a max-width of 200px</li>
+<li><code>small</code>: Make the dropdown have a max-width of 300px</li>
+<li><code>medium</code>: Make the dropdown have a max-width of 500px</li>
+<li><code>large</code>: Make the dropdown have a max-width of 800px</li>
+<li><code>content</code>: Add padding inside the dropdown for better-looking content</li>
+</ul>
+<h5 id="hoverable-dropdown-option">Hoverable Dropdown Option</h5>
+<p>If you&#39;d rather have your dropdown be accessible by hover, you can add a data-option to the target element:</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span> <span class="attribute">data-dropdown</span>=<span class="value">&quot;hover1&quot;</span> <span class="attribute">data-options</span>=<span class="value">&quot;is_hover:true&quot;</span>&gt;</span>Has Hover Dropdown<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">&quot;hover1&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;f-dropdown&quot;</span> <span class="attribute">data-dropdown-content</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>This is another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#&quot;</span>&gt;</span>Yet another<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+<a href="#" data-dropdown="hover1" data-options="is_hover:true;">Has Hover Dropdown</a>
+
+<ul id="hover1" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+  </div>
+</div>
+
+<hr>
+<h2 id="customize-with-sass">Customize with Sass</h2>
+<p>Dropdowns can be easily customized using our Sass variables.</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container">$include-<span class="tag">html</span>-<span class="tag">button</span>-classes<span class="value">: $include-html-classes;</span>
+
+<span class="comment">/* We use these to controls height and width styles. */</span>
+$f-dropdown-<span class="attribute">max-width</span><span class="value">: <span class="number">200</span>px;</span>
+$f-dropdown-<span class="attribute">height</span><span class="value">: auto;</span>
+$f-dropdown-<span class="attribute">max-height</span><span class="value">: none;</span>
+$f-dropdown-<span class="attribute">margin-top</span><span class="value">: <span class="number">2</span>px;</span>
+
+<span class="comment">/* We use this to control the background color */</span>
+$f-dropdown-bg<span class="value">: <span class="hexcolor">#fff</span>;</span>
+
+<span class="comment">/* We use this to set the border styles for dropdowns. */</span>
+$f-dropdown-<span class="attribute">border-style</span><span class="value">: solid;</span>
+$f-dropdown-<span class="attribute">border-width</span><span class="value">: <span class="number">1</span>px;</span>
+$f-dropdown-<span class="attribute">border-color</span><span class="value">: scale-color(<span class="hexcolor">#fff</span>, $lightness: -<span class="number">20</span>%);</span>
+
+<span class="comment">/* We use these to style the triangle pip. */</span>
+$f-dropdown-triangle-size<span class="value">: <span class="number">6</span>px;</span>
+$f-dropdown-triangle-<span class="attribute">color</span><span class="value">: <span class="hexcolor">#fff</span>;</span>
+$f-dropdown-triangle-side-offset<span class="value">: <span class="number">10</span>px;</span>
+
+<span class="comment">/* We use these to control styles for the list elements. */</span>
+$f-dropdown-<span class="attribute">list-style</span><span class="value">: none;</span>
+$f-dropdown-<span class="attribute">font</span>-<span class="attribute">color</span><span class="value">: <span class="hexcolor">#555</span>;</span>
+$f-dropdown-<span class="attribute">font-size</span><span class="value">: rem-calc(<span class="number">14</span>);</span>
+$f-dropdown-list-<span class="attribute">padding</span><span class="value">: rem-calc(<span class="number">5</span> <span class="number">10</span>);</span>
+$f-dropdown-<span class="attribute">line-height</span><span class="value">: rem-calc(<span class="number">18</span>);</span>
+$f-dropdown-list-hover-bg<span class="value">: <span class="hexcolor">#eeeeee</span>;</span>
+$dropdown-mobile-<span class="value">default</span>-<span class="attribute">float</span><span class="value">: <span class="number">0</span>;</span>
+
+<span class="comment">/* We use this to control the styles for when the dropdown has custom content. */</span>
+$f-dropdown-<span class="attribute">content</span>-<span class="attribute">padding</span><span class="value">: rem-calc(<span class="number">20</span>);</span></div></code></pre>
+
+
+<hr>
+<h2 id="semantic-markup-with-sass">Semantic Markup With Sass</h2>
+<p>You can create your own dropdowns using our Sass mixins.</p>
+<h3>Basic</h3>
+
+<p>You can use the <code>dropdown-container()</code> and <code>dropdown-style()</code> mixins to create your own dropdowns, like so:</p>
+<h5 id="the-container-mixin">The Container Mixin</h5>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="class">.custom-dropdown-container-class</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> dropdown-container</span>();</span>
+}</div></code></pre>
+
+
+<h5 id="the-list-style-mixin">The List Style Mixin</h5>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="class">.custom-dropdown-container-class</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> dropdown-container</span>();</span>
+
+  <span class="tag">li</span> { <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> dropdown-style</span>;</span> }
+}</div></code></pre>
+
+
+<h3>Advanced</h3>
+
+<p>You can further customize your dropdowns with the options in the <code>dropdown-container()</code> mixin:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="class">.custom-dropdown-container-class</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> dropdown-container</span>(
+    //<span class="preprocessor"> Sets</span><span class="preprocessor"> list-style.</span><span class="preprocessor"> Default</span>:<span class="preprocessor"> list.</span><span class="preprocessor"> Options</span>: [list,<span class="preprocessor"> content</span>]
+    $content:list,
+    //<span class="preprocessor"> Sets</span><span class="preprocessor"> if</span><span class="preprocessor"> dropdown</span><span class="preprocessor"> has</span><span class="preprocessor"> triangle.</span><span class="preprocessor"> Default</span>:true.
+    $triangle:true,
+    //<span class="preprocessor"> Sets</span><span class="preprocessor"> max-width.</span><span class="preprocessor"> Default</span>: $f-dropdown-max-width
+    $max-width
+  );</span>
+
+  <span class="tag">li</span> { <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> dropdown-style</span>;</span> }
+}</div></code></pre>
+
+
+<hr>
+<h2 id="configure-with-javascript">Configure With Javascript</h2>
+<p>It&#39;s easy to configure dropdowns using our provided Javascript. You can use data-attributes or plain old Javascript. Make sure <code>jquery.js</code>, <code>foundation.js</code> and <code>foundation.dropdown.js</code> have been included on your page before continuing. For example, add the following before the closing <code>&lt;body&gt;</code> tag:</p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/vendor/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.dropdown.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+
+<h3 id="optional-javascript-configuration">Optional Javascript Configuration</h3>
+<h4 id="js">JS</h4>
+<pre><code class="language-js"><div class="code-container">$(document).foundation({
+  dropdown: {
+    <span class="comment">// specify the class used for active dropdowns</span>
+    active_class: <span class="string">'open'</span>
+  }
+});</div></code></pre>
+
+
+<hr>
+<h3 id="sass-errors-">Sass Errors?</h3>
+<p>If the default &quot;foundation&quot; import was commented out, then make sure you import this file:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"foundation/components/dropdown"</span>;</span></div></code></pre>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="../assets/js/templates.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/jquery-1.9.0.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="../assets/js/jquery-edge.js"></script>
+    <!--<![endif]-->
+
+    <script src="../assets/js/all.js"></script>
+
+    <script>
+
+    // Fix for foundation stylesheets being picked up as "null" or "not an object",
+    // implementation from here: http://foundation.zurb.com/forum/posts/3189-foundation-5-orbit-slider-ie8-issue
+    (function($) {
+        if (!Foundation.stylesheet) {
+            Foundation._style_element = $("<style></style>").appendTo("head")[0];
+            Foundation.stylesheet = Foundation._style_element.styleSheet;
+            if (Foundation.stylesheet) {
+                Foundation.stylesheet.cssRules = {
+                    length: 0
+                };
+                Foundation.stylesheet.insertRule = function(rule, index) {
+                    var media, mediaMatch, mediaRegex, namespace, ruleMatch, ruleRegex;
+                    mediaRegex = /^\s*@media\s*(.*?)\s*\{\s*(.*?)\s*\}\s*$/;
+                    mediaMatch = mediaRegex.exec(rule);
+                    media = "";
+                    if (mediaMatch) {
+                        media = "@media " + mediaMatch[1] + " ";
+                        rule = mediaMatch[2];
+                    }
+                    ruleRegex = /^\s*(.*?)\s*\{\s*(.*?)\s*\}\s*$/;
+                    ruleMatch = ruleRegex.exec(rule);
+                    namespace = "" + media + ruleMatch[1];
+                    rule = ruleMatch[2];
+                    return this.addRule(namespace, rule);
+                };
+            } else if (window.console) {
+                console.log("Could not fix Foundation css rules...");
+            }
+        }
+    })(jQuery);
+
+    // Safely initiate foundation now
+      $(document).foundation();
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/REM-unit-polyfill.js"></script>
+    <![endif]-->
+  </body>
+</html>

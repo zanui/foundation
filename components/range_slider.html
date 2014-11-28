@@ -1,0 +1,541 @@
+<!doctype html>
+<!--[if lt IE 9]> <html class="no-js lt-ie10 lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Range Sliders | Zanui Pattern Library</title>
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+      <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+      <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+      <meta name="msapplication-TileColor" content="#002337">
+      <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+      <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+      <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+      <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+
+    <link href="../assets/css/docs.css" rel="stylesheet" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" />
+    <script src="../assets/js/modernizr.js"></script>
+
+      <!--[if lt IE 9]>
+      <link rel="stylesheet" href="../assets/css/ie8.css">
+
+      <script src="../assets/js/ie8-polyfill.js"></script>
+      <![endif]-->
+
+  </head>
+  <body class="antialiased hide-extras">
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+         <title>Zanui Pattern Library</title>
+
+
+<!-- <nav class="tab-bar show-for-small">
+  <a class="off-canvas-left-toggle menu-icon ">
+    <span></span>
+  </a>  
+</nav> -->
+
+
+<nav class="top-bar docs-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://zanui.com.au/">Zanui Pattern Library</a></h1>
+    </li>
+  </ul>
+
+</nav>
+
+
+        <section role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-4 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+  <h5>Documentation</h5>
+  <form>
+    <!--  <label>Search Documentation</label> -->
+    <input tabindex="1" id="autocomplete" type="search" placeholder="Search Docs: e.g. forms">
+  </form>
+
+  <nav>
+    <ul class="side-nav">
+
+        <li class="divider"></li>
+        <li class="heading">Colour</li>
+        <li><a href="colour_palette.html" data-search="">Colour Palette</a></li>
+        <li><a href="colourful_text.html" data-search="">Colourful Text</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Glyphs</li>
+        <li><a href="web_fonts.html" data-search="">Web Fonts</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Buttons</li>
+        <li><a href="buttons.html" data-search="">Buttons</a></li>
+        <li><a href="button_groups.html" data-search="Button Bar">Button Groups</a></li>
+        <li><a href="dropdown_buttons.html" data-search="">Dropdown Buttons <span class="label">JS</span></a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Typography</li>
+        <li><a href="typography.html" data-search="Typography,Type-setting,Composition">Type</a></li>
+        <li><a href="inline_lists.html" data-search="Lists">Inline Lists</a></li>
+        <li><a href="labels.html" data-search="Tags">Labels</a></li>
+        <li><a href="keystrokes.html" data-search="">Keystrokes</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Forms</li>
+        <li><a href="forms.html" data-search="">Forms</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Content</li>
+        <li><a href="dropdown.html" data-search="">Dropdowns <span class="label">JS</span></a></li>
+        <li><a href="progress_bars.html" data-search="">Progress Bars</a></li>
+        <li><a href="tables.html" data-search="">Tables</a></li>
+        <li><a href="accordion.html" data-search="">Accordion <span class="label">JS</span></a></li>
+        <li><a href="tabs.html" data-search="">Tabs <span class="label">JS</span></a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Navigation</li>
+        <li><a href="offcanvas.html" data-search="Off Canvas">Offcanvas <span class="label">JS</span></a></li>
+        <li><a href="topbar.html" data-search="Nav Bar,Navigation,Sticky">Top Bar <span class="label">JS</span></a></li>
+        <li><a href="sidenav.html" data-search="">Side Nav</a></li>
+        <li><a href="magellan.html" data-search="Scrollspy">Magellan Sticky Nav <span class="label">JS</span></a></li>
+        <li><a href="subnav.html" data-search="">Sub Nav</a></li>
+        <li><a href="breadcrumbs.html" data-search="Navigation Path,Cookie Crumb">Breadcrumbs</a></li>
+        <li><a href="pagination.html" data-search="">Pagination</a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Callouts &amp; Prompts</li>
+        <li><a href="alert_boxes.html" data-search="Error,Success,Warning">Alerts <span class="label">JS</span></a></li>
+        <li><a href="panels.html" data-search="Wells">Panels</a></li>
+        <li><a href="tooltips.html" data-search="Popover">Tooltips <span class="label">JS</span></a></li>
+
+        <li class="divider"></li>
+        <li class="heading">Structure</li>
+        <li><a href="grid.html" data-search="">Grid</a></li>
+        <li><a href="block_grid.html" data-search="">Block Grid</a></li>
+        <li><a href="visibility.html" data-search="">Visibility</a></li>
+        <li><a href="../media-queries.html" data-search="Breakpoints">Media Queries</a></li>
+        <li><a href="../utility-classes.html" data-search="">Utility Classes</a></li>
+        <li><a href="../javascript-utilities.html" data-search="">Javascript Utilities</a></li>
+
+    </ul>
+  </nav>
+
+</div>
+
+              </div>
+            </div>
+            <div class="large-9 medium-8 columns">
+              <h1 id="range-sliders">Range Sliders</h1>
+              <h3 class="subheader">This handy slider will allow you to drag a handle to select a specific value from a range.</h3>
+
+<hr>
+<div class="row">
+  <div class="medium-2 columns">
+    <div class="row">
+      <div class="small-3 small-offset-3 medium-4 medium-offset-0 columns">
+        <div class="range-slider vertical-range" data-slider data-options="display_selector:#sliderOutput2;vertical:true;">
+          <span class="range-slider-handle"></span>
+          <span class="range-slider-active-segment"></span>
+        </div>
+      </div>
+      <div class="small-4 small-offset-2 medium-8 medium-offset-0 columns">
+        <span id="sliderOutput2" style="display: block;margin-top: 98px;"></span>
+      </div>
+    </div>
+  </div>
+  <div class="medium-9 medium-offset-1 columns" style="margin-top: 79px;">
+    <div class="row">
+      <div class="small-10 medium-11 columns">
+        <div class="range-slider" data-slider data-options="display_selector:#sliderOutput1;">
+          <span class="range-slider-handle"></span>
+          <span class="range-slider-active-segment"></span>
+        </div>
+      </div>
+      <div class="small-2 medium-1 columns">
+        <span id="sliderOutput1" style="display: block;margin-top: 17px;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<hr>
+<h2>Basic</h2>
+
+<p>You can create a range slider bar using minimal markup. The slider&#39;s value will be assigned to any <code>&lt;input type=&quot;hidden&quot;&gt;</code> elements inside the <code>data-slider</code> div and as the value of the <code>data-slider</code> attribute.</p>
+<h3 id="horizontal">Horizontal</h3>
+<p>By default, the range slider displays horizontally.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider&quot;</span> <span class="attribute">data-slider</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <div class="range-slider" data-slider>
+      <span class="range-slider-handle"></span>
+      <span class="range-slider-active-segment"></span>
+      <input type="hidden">
+    </div>
+  </div>
+</div>
+
+<h3 id="vertical">Vertical</h3>
+<p>Adding the <code>vertical-range</code> class to the outer <code>&lt;div&gt;</code> and passing the data-option <code>vertical: true;</code> displays the slider vertically instead of horizontally.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider vertical-range&quot;</span> <span class="attribute">data-slider</span> <span class="attribute">data-options</span>=<span class="value">&quot;vertical: true;&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <div class="range-slider vertical-range" data-slider data-options="vertical: true;">
+      <span class="range-slider-handle"></span>
+      <span class="range-slider-active-segment"></span>
+      <input type="hidden">
+    </div>
+  </div>
+</div>
+
+<h3 id="with-label">With Label</h3>
+<p>You can use the <code>display_selector</code> data option to pass in an element (or input) to display the slider value in.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;row&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;small-10 medium-11 columns&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider&quot;</span> <span class="attribute">data-slider</span> <span class="attribute">data-options</span>=<span class="value">&quot;display_selector: #sliderOutput3;&quot;</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;small-2 medium-1 columns&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">&quot;sliderOutput3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <div class="row">
+      <div class="small-10 medium-11 columns">
+        <div class="range-slider" data-slider data-options="display_selector: #sliderOutput3;">
+          <span class="range-slider-handle"></span>
+          <span class="range-slider-active-segment"></span>
+        </div>
+      </div>
+      <div class="small-2 medium-1 columns">
+        <span id="sliderOutput3" style="display: block;margin-top: 17px;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<h2>Advanced</h2>
+
+<p>Additional classes and data options can be added to your range slider to change its appearance and function.</p>
+<h3 id="styling-classes">Styling Classes</h3>
+<p>You can add a border radius to the range slider by adding the <code>radius</code> class to the <code>range-slider</code> element, or fully round it by adding the <code>round</code> class. Adding the <code>disabled</code> class or attribute to the slider will disable it completely.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider radius&quot;</span> <span class="attribute">data-slider</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider round&quot;</span> <span class="attribute">data-slider</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider disabled&quot;</span> <span class="attribute">data-slider</span> <span class="attribute">disabled</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <div class="range-slider radius" data-slider>
+      <span class="range-slider-handle"></span>
+      <span class="range-slider-active-segment"></span>
+      <input type="hidden">
+    </div> 
+    <br><br>
+    <div class="range-slider round" data-slider>
+      <span class="range-slider-handle"></span>
+      <span class="range-slider-active-segment"></span>
+      <input type="hidden">
+    </div>
+    <br><br>
+    <div class="range-slider disabled" data-slider disabled>
+      <span class="range-slider-handle"></span>
+      <span class="range-slider-active-segment"></span>
+      <input type="hidden">
+    </div>
+  </div>
+</div>
+
+<h3 id="fixed-steps">Fixed Steps</h3>
+<p>You can create a range slider with fixed steps by setting the <code>steps</code> variable in the <code>data-options</code> attribute.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider&quot;</span> <span class="attribute">data-slider</span> <span class="attribute">data-options</span>=<span class="value">&quot;step: 20;&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <div class="row">
+      <div class="small-10 medium-11 columns">
+        <div class="range-slider" data-slider data-options="display_selector: #sliderOutput4; step: 20;">
+          <span class="range-slider-handle"></span>
+          <span class="range-slider-active-segment"></span>
+        </div>
+      </div>
+      <div class="small-2 medium-1 columns">
+        <span id="sliderOutput4" style="display: block;margin-top: 17px;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 id="custom-range">Custom Range</h3>
+<p>You can create a range slider with custom range by setting the <code>start</code> and <code>end</code> variables in the <code>data-options</code> attribute.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider&quot;</span> <span class="attribute">data-slider</span> <span class="attribute">data-options</span>=<span class="value">&quot;start: 1; end: 10;&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-handle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">&quot;range-slider-active-segment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">&quot;hidden&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <div class="row">
+      <div class="small-10 medium-11 columns">
+        <div class="range-slider" data-slider data-options="display_selector: #sliderOutput5; start: 1; end: 10;">
+          <span class="range-slider-handle"></span>
+          <span class="range-slider-active-segment"></span>
+        </div>
+      </div>
+      <div class="small-2 medium-1 columns">
+        <span id="sliderOutput5" style="display: block;margin-top: 17px;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 id="callbacks">Callbacks</h3>
+<p>There are two ways to bind to callbacks in your sliders.</p>
+<div class="panel">
+  <p><strong>Deprecation Notice</strong></p>
+  <p>Previous versions of the slider plugin emitted an un-namespaced <code>change</code> event, however, this has been replaced by the namespaced <code>change.fndtn.slider</code> event. The un-namespaced event will be fully deprecated when Foundation 5.4 is released.</p>
+</div>
+
+<div class="row">
+  <div class="large-6 columns">
+    <h4>Callback Function</h4>
+
+<pre><code class="language-js"><div class="code-container">$(document).foundation({
+  slider: {
+    on_change: <span class="keyword">function</span>(){
+      <span class="comment">// do something when the value changes</span>
+    }
+  }
+});</div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Events</h4>
+
+<pre><code class="language-js"><div class="code-container">$(<span class="string">&#39;[data-slider]&#39;</span>).on(<span class="string">&#39;change.fndtn.slider&#39;</span>, <span class="keyword">function</span>(){
+  <span class="comment">// do something when the value changes</span>
+});</div></code></pre>
+
+  </div>
+</div>
+
+<h3 id="getting-and-setting-values">Getting and Setting Values</h3>
+<p>To get the value of a slider, get the vale of its <code>data-slider</code> attribute.</p>
+<h4>Get Value</h4>
+
+<pre><code class="language-js"><div class="code-container">$(<span class="string">'#slider'</span>).attr(<span class="string">'data-slider'</span>);</div></code></pre>
+
+
+<p>To set a slider&#39;s value, call the <code>foundation</code> function on the slider and pass in <code>&#39;slider&#39;</code>, <code>&#39;set_value&#39;</code> and the new slider value as arguments.</p>
+<h4>Set Value</h4>
+
+<pre><code class="language-js"><div class="code-container"><span class="keyword">var</span> new_value = <span class="number">3</span>;
+$(<span class="string">'slider'</span>).foundation(<span class="string">'slider'</span>, <span class="string">'set_value'</span>, new_value);</div></code></pre>
+
+
+
+<hr>
+<h3 id="using-the-javascript">Using the Javascript</h3>
+<p>Before you can use Slider you&#39;ll want to verify that jQuery and <code>foundation.js</code> are available on your page. You can refer to the <a href="../javascript.html">Javascript documentation</a> on setting that up.</p>
+<p>Just add <code>foundation.slider.js</code> AFTER the <code>foundation.js</code> file. Your markup should look something like this:</p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+  ...
+
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/vendor/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.slider.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="comment">&lt;!-- Other JS plugins can be included here --&gt;</span>
+
+  <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+    $(document).foundation();
+  </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span></div></code></pre>
+
+
+<p>Required Foundation Library: <code>foundation.slider.js</code></p>
+<hr>
+<h2 id="customize-with-sass">Customize with Sass</h2>
+<p>Sliders can be easily customized using our provided Sass variables.</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container">$include-<span class="tag">html</span>-range-slider-classes<span class="value">: $include-html-classes;</span>
+
+<span class="comment">// These variabels define the slider bar styles</span>
+$range-slider-bar-<span class="attribute">width</span><span class="value">: <span class="number">100</span>%;</span>
+$range-slider-bar-<span class="attribute">height</span><span class="value">: rem-calc(<span class="number">16</span>);</span>
+
+$range-slider-bar-<span class="attribute">border-width</span><span class="value">: <span class="number">1</span>px;</span>
+$range-slider-bar-<span class="attribute">border-style</span><span class="value">: solid;</span>
+$range-slider-bar-<span class="attribute">border-color</span><span class="value">: <span class="hexcolor">#ddd</span>;</span>
+$range-slider-radius<span class="value">: $global-radius;</span>
+$range-slider-round<span class="value">: $global-rounded;</span>
+$range-slider-bar-bg-<span class="attribute">color</span><span class="value">: <span class="hexcolor">#fafafa</span>;</span>
+
+<span class="comment">// Vertical bar styles</span>
+$range-slider-vertical-bar-<span class="attribute">width</span><span class="value">: rem-calc(<span class="number">16</span>);</span>
+$range-slider-vertical-bar-<span class="attribute">height</span><span class="value">: rem-calc(<span class="number">200</span>);</span>
+
+<span class="comment">// These variabels define the slider handle styles</span>
+$range-slider-handle-<span class="attribute">width</span><span class="value">: rem-calc(<span class="number">32</span>);</span>
+$range-slider-handle-<span class="attribute">height</span><span class="value">: rem-calc(<span class="number">22</span>);</span>
+$range-slider-handle-<span class="attribute">position</span>-<span class="attribute">top</span><span class="value">: rem-calc(-<span class="number">5</span>);</span>
+$range-slider-handle-bg-<span class="attribute">color</span><span class="value">: $primary-color;</span>
+$range-slider-handle-<span class="attribute">border-width</span><span class="value">: <span class="number">1</span>px;</span>
+$range-slider-handle-<span class="attribute">border-style</span><span class="value">: solid;</span>
+$range-slider-handle-<span class="attribute">border-color</span><span class="value">: none;</span>
+$range-slider-handle-radius<span class="value">: $global-radius;</span>
+$range-slider-handle-round<span class="value">: $global-rounded;</span>
+$range-slider-handle-bg-hover-<span class="attribute">color</span><span class="value">: scale-color($primary-color, $lightness: -<span class="number">12</span>%);</span>
+$range-slider-handle-<span class="attribute">cursor</span><span class="value">: pointer;</span></div></code></pre>
+
+
+
+<hr>
+<h3 id="sass-errors-">Sass Errors?</h3>
+<p>If the default &quot;foundation&quot; import was commented out, then make sure you import this file:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"foundation/components/range-slider"</span>;</span></div></code></pre>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="../assets/js/templates.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/jquery-1.9.0.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="../assets/js/jquery-edge.js"></script>
+    <!--<![endif]-->
+
+    <script src="../assets/js/all.js"></script>
+
+    <script>
+
+    // Fix for foundation stylesheets being picked up as "null" or "not an object",
+    // implementation from here: http://foundation.zurb.com/forum/posts/3189-foundation-5-orbit-slider-ie8-issue
+    (function($) {
+        if (!Foundation.stylesheet) {
+            Foundation._style_element = $("<style></style>").appendTo("head")[0];
+            Foundation.stylesheet = Foundation._style_element.styleSheet;
+            if (Foundation.stylesheet) {
+                Foundation.stylesheet.cssRules = {
+                    length: 0
+                };
+                Foundation.stylesheet.insertRule = function(rule, index) {
+                    var media, mediaMatch, mediaRegex, namespace, ruleMatch, ruleRegex;
+                    mediaRegex = /^\s*@media\s*(.*?)\s*\{\s*(.*?)\s*\}\s*$/;
+                    mediaMatch = mediaRegex.exec(rule);
+                    media = "";
+                    if (mediaMatch) {
+                        media = "@media " + mediaMatch[1] + " ";
+                        rule = mediaMatch[2];
+                    }
+                    ruleRegex = /^\s*(.*?)\s*\{\s*(.*?)\s*\}\s*$/;
+                    ruleMatch = ruleRegex.exec(rule);
+                    namespace = "" + media + ruleMatch[1];
+                    rule = ruleMatch[2];
+                    return this.addRule(namespace, rule);
+                };
+            } else if (window.console) {
+                console.log("Could not fix Foundation css rules...");
+            }
+        }
+    })(jQuery);
+
+    // Safely initiate foundation now
+      $(document).foundation();
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/REM-unit-polyfill.js"></script>
+    <![endif]-->
+  </body>
+</html>
