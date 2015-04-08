@@ -56,7 +56,11 @@
     wrapperHTML: '<div class="orbit-wrapper" />',
     timerHTML: '<div class="timer"><span class="mask"><span class="rotator"></span></span><span class="pause"></span></div>',
     captionHTML: '<div class="orbit-caption"></div>',
-    directionalNavHTML: '<div class="slider-nav"><span class="right"></span><span class="left"></span></div>',
+    directionalNavHTML:
+        '<div class="slider-nav">' +
+            '<span class="right ga-track-link-click" data-ga-category="Homepage" data-ga-action="Slideshow" data-ga-label="Right Button"></span>' +
+            '<span class="left ga-track-link-click" data-ga-category="Homepage" data-ga-action="Slideshow" data-ga-label="Left Button"></span>' +
+        '</div>',
     bulletHTML: '<ul class="orbit-bullets"></ul>',
 
     init: function (element, options) {
