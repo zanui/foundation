@@ -22,6 +22,8 @@
 
     defaults: {
       context: null,     // where the orbit is placed
+      page: 'Zanui',     // which page the orbit is placed
+      section: 'Orbit Slider',     // which section the orbit is placed
       onImageLoad: null,    // callback when image lazyload is triggered
       animation: 'horizontal-push',     // fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
       animationSpeed: 600,        // how fast animtions are
@@ -435,9 +437,17 @@
 
     addBullet: function (index, slide) {
       var position = index + 1,
-          $li = $('<li>' + (position) + '</li>'),
+          bullet,
+          $li
           thumbName,
           self = this;
+
+      bullet = '<li class="ga-track-link-click"' +
+                ' data-ga-category="' + this.options.page + '"' +
+                ' data-ga-action="' + this.options.section + '"' +
+                ' data-ga-label="Nav Dots" data-ga-value="' + (position) + '">' + (position) + '</li>';
+
+      $li = $(bullet);
 
       if (this.options.bulletThumbs) {
         thumbName = $(slide).attr('data-thumb');
