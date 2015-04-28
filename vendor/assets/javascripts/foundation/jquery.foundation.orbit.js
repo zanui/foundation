@@ -438,7 +438,7 @@
     addBullet: function (index, slide) {
       var position = index + 1,
           bullet,
-          $li
+          $li,
           thumbName,
           self = this;
 
